@@ -25,7 +25,6 @@ public class DatenSpeicher {
 		return datenSpeicher;
 	}
 	
-	
 //	public double wohnungsanteilFlaeche[];
 //	public double wohnungsanteilBewertet[];
 
@@ -38,8 +37,6 @@ public class DatenSpeicher {
 //		Investition iv = investitionen.get(id);
 //		return (iv != null) ? iv : investitionen.put(id, new Investition());
 //	}
-
-
 
 	// public InvestitionBO[] getAllInvestition() {
 	// InvestitionBO[] inv = new InvestitionBO[invest.size()];

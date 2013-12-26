@@ -9,7 +9,6 @@ import ch.kausoft.KauSoft;
 
 /**
  * @author Heinz
- * 
  */
 public class Daten extends KauSoft {
 
