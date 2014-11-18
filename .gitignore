@@ -4,6 +4,9 @@
 *.log
 *.prefs
 
+*/doc/*
+*/target/*
+
 # Package Files #
 *.jar
 *.war

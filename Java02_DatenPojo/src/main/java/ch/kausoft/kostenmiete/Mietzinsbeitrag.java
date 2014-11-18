@@ -20,6 +20,17 @@ import ch.kausoft.basic.JahrMonat;
 @EqualsAndHashCode(callSuper = false)
 public final class Mietzinsbeitrag extends DatenRecord {
 
+	/**
+	 * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
+	 */
+	public JahrMonat gueltigAb;
+
+	/**
+	 * Ab dem definierten Jahr wird jährlich dieser Betrag verwendet um die
+	 * auflauffenden Zinsen und die Amortisation zu finanzieren.
+	 */
+	public double jaehrlicherMietzinsbeitrag;
+
 	public Mietzinsbeitrag() {
 	}
 
@@ -33,15 +44,5 @@ public final class Mietzinsbeitrag extends DatenRecord {
 		this.jaehrlicherMietzinsbeitrag = jaehrlicherMietzinsbeitrag;
 	}
 
-	/**
-	 * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
-	 */
-	public JahrMonat gueltigAb;
-
-	/**
-	 * Ab dem definierten Jahr wird jährlich dieser Betrag verwendet um die
-	 * auflauffenden Zinsen und die Amortisation zu finanzieren.
-	 */
-	public double jaehrlicherMietzinsbeitrag;
 
 }

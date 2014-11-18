@@ -6,28 +6,18 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import lombok.Data;
-import lombok.NonNull;
 
 @Data
-public final class RecordID {
+public class RecordID {
 
 	/**
 	 * 
 	 */
-	private long id = getNextNewID();
+	private long id = -1;
 
 	/**
-	 * Bezeichnung
-	 */
-	@NonNull
-	public String bezeichnung;
-
-
-
-	/**
-	 * Die zuletzt vergebene ID-Nummer wird festgehalten. Dies ist notwendig
-	 * weil innerhalb sehr kurzer Zeit mehrere ID's angefordert werden können.
-	 * In der Methode
+	 * Die zuletzt vergebene ID-Nummer wird festgehalten. Dies ist notwendig weil innerhalb sehr kurzer Zeit mehrere ID's
+	 * angefordert werden können. In der Methode
 	 * 
 	 * @see #getNextNewID()
 	 */
@@ -39,18 +29,8 @@ public final class RecordID {
 	private final long x = 100;
 
 	/**
-	 * 
-	 * @param pBezeichnung
-	 * @param pBeschreibung
-	 */
-	public RecordID(String pBezeichnung) {
-		this.bezeichnung = pBezeichnung;
-	}
-
-	/**
-	 * Hier wird die nexte eindeutige ID generiert. Mit diesem System ist jeder
-	 * Record ein-eindeutig. Wurde einmal eine ID vergeben, bekommt niemand
-	 * anders diese ID.
+	 * Hier wird die nexte eindeutige ID generiert. Mit diesem System ist jeder Record ein-eindeutig. Wurde einmal eine ID
+	 * vergeben, bekommt niemand anders diese ID.
 	 * 
 	 * @return long
 	 */
@@ -66,11 +46,9 @@ public final class RecordID {
 
 	/**
 	 * Darstellung der DataRecordID. <br>
-	 * Die DataRecordID wird folgendermassen dargestellt. ( 2007.11.09 01:28:03
-	 * 22 / 11945.68081.30222 ). Dabei ist die Darstellungsform
-	 * 11945.68081.30222 die wirklich eindeutige ID. Die Darstellung in der
-	 * Datumsform kann ungenau sein. Dies ist der Fall weil die Zeit in
-	 * Millisekunden gespeichert wird.<br>
+	 * Die DataRecordID wird folgendermassen dargestellt. ( 2007.11.09 01:28:03 22 / 11945.68081.30222 ). Dabei ist die
+	 * Darstellungsform 11945.68081.30222 die wirklich eindeutige ID. Die Darstellung in der Datumsform kann ungenau sein.
+	 * Dies ist der Fall weil die Zeit in Millisekunden gespeichert wird.<br>
 	 * <BR>
 	 * 
 	 * @since created at 30.07.2008.00:16:42
@@ -92,12 +70,6 @@ public final class RecordID {
 				+ s.substring(10);
 	}
 
-//	/**
-//	 * 
-//	 */
-//	@Override
-//	public String toString() {
-//		return getString() + " " + bezeichnung + " " + beschreibung;
-//	}
+
 
 }

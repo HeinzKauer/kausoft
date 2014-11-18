@@ -18,7 +18,16 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class DatenRecord extends Daten {
+	
+	protected DatenRecord() {		
+		setId(getNextNewID());
+	}
+	
+	
+	protected DatenRecord(long id) {		
+		setId(id);
+	}
 
-	private Long id;
+	
 
 }

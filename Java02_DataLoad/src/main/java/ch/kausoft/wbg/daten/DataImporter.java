@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
+import ch.kausoft.basic.DatenSpeicher;
 import ch.kausoft.kostenmiete.InvestiertesKapital;
 import ch.kausoft.kostenmiete.Investition;
 import ch.kausoft.kostenmiete.Wohnung;
@@ -22,13 +23,11 @@ public class DataImporter {
 
 	DatenSpeicher ds;
 
-	public DatenSpeicher load() {
+	public DatenSpeicher load(String path) {
 
 		ds = DatenSpeicher.getDatenSpeicher();
-		// String name =
-		// "C:\\eclipse2013\\git\\github\\Kostenmiete\\src\\ch\\kausoft\\wbg\\daten\\InputDaten.csv";
-		String name = "C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\InputDaten.csv";
 
+		
 		File f = null;
 		FileInputStream fis = null;
 		InputStreamReader isr = null;
@@ -36,7 +35,7 @@ public class DataImporter {
 
 		String zeile;
 		try {
-			f = new File(name);
+			f = new File(path);
 			fis = new FileInputStream(f);
 			isr = new InputStreamReader(fis);
 			br = new BufferedReader(isr);
@@ -67,45 +66,16 @@ public class DataImporter {
 		if (d != null && d.length <= 3)
 			return; // Zeile überlesen
 		if (d[0].equalsIgnoreCase("InvestieresKapital")) {
-			parsKapital(d);
+			DataParser.parsInvestiertesKapital(d);
 		} else if (d[0].equalsIgnoreCase("KapitalZinssatz")) {
-			parsZinssatz(d);
+			DataParser.parsKapitalZinssatz(d);
 		} else if (d[0].equalsIgnoreCase("Investition")) {
-			parsInvestition(d);
+			DataParser.parsInvestition(d);
 		} else if (d[0].equalsIgnoreCase("Wohnung")) {
-			parsWohnung(d);
+			DataParser.parsWohnung(d);
 		}
 	}
 
-	private void parsWohnung(String[] d) {
-		Long id = new Long(d[1]);
-		short hausNr = Short.parseShort(d[2]);
-		short wNummer = Short.parseShort(d[3]);
-		String berz = d[4];
-		String besch = d[5];
-		Double flaeche = Double.parseDouble(d[6]);
-		Double bewertung = Double.parseDouble(d[7]);
-		Wohnung w = new Wohnung(id, hausNr, wNummer, berz, besch, flaeche,
-				bewertung);
-		ds.getWohnungen().put(id, w);
-	}
-
-	private void parsInvestition(String[] d) {
-		Long id = new Long(d[1]);
-		Long idKapital = new Long(d[2]);
-		InvestiertesKapital investiertesKapital = ds.getInvestiertesKapital()
-				.get(idKapital);
-		String bezeichnung = d[3];
-		String beschreibung = d[4];
-		int jahr = Integer.parseInt(d[5]);
-		int monat = Integer.parseInt(d[6]);
-		int betrag = Integer.parseInt(d[7]);
-		int lebesdauer = Integer.parseInt(d[8]);
-		int betragEFond = Integer.parseInt(d[9]);
-		Investition i = new Investition(id, investiertesKapital, bezeichnung,
-				beschreibung, jahr, monat, betrag, lebesdauer, betragEFond);
-		ds.getInvestitionen().put(id, i);
-	}
 
 	//
 	// private void parsInvestition(String[] d) {
@@ -189,24 +159,19 @@ public class DataImporter {
 	// }
 	// }
 
-	private void parsKapital(String[] d) {
-		InvestiertesKapital k = //
-		new InvestiertesKapital(new Long(d[1]), d[2], d[3]);
-		ds.getInvestiertesKapital().put(k.getId(), k);
-	}
 
-	/**
-	 * @param d
-	 */
-	private void parsZinssatz(String[] d) {
-		KapitalZinssatz kz = new KapitalZinssatz(Integer.parseInt(d[2]),
-				Double.parseDouble(d[3]), Double.parseDouble(d[4]),
-				Double.parseDouble(d[6]), Double.parseDouble(d[6]));
 
-		InvestiertesKapital kapital = ds.getInvestiertesKapital().get(
-				new Long(d[1]));
-		List<KapitalZinssatz> zinssatz = kapital.getZinssatz();
-		zinssatz.add(kz);
-
-	}
+//	/**
+//	 * @param d
+//	 */
+//	private void parsZinssatz(String[] d) {
+//		KapitalZinssatz kz = new KapitalZinssatz(Integer.parseInt(d[2]),
+//				Double.parseDouble(d[3]), Double.parseDouble(d[4]),
+//				Double.parseDouble(d[6]), Double.parseDouble(d[6]));
+//
+//		InvestiertesKapital kapital = ds.getInvestiertesKapital().get(
+//				new Long(d[1]));
+//		List<KapitalZinssatz> zinssatz = kapital.getZinssatz();
+//		zinssatz.add(kz);
+//	}
 }

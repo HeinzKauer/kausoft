@@ -7,8 +7,12 @@ import ch.kausoft.basic.DatenRecord;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Tilgung extends DatenRecord {
+	
+  public enum TilgungStrategie {
+    Anzahl, Bewertung, Flaeche, Individuell, automatisch
+  }
 
-	private int jahr;
+	private int abJahr;
 	private int abMonat;
 	private int bisUndMitMonat;
 
@@ -18,7 +22,6 @@ public class Tilgung extends DatenRecord {
 	private double amortisationsBetragJahr;
 	private double zinsBetragPeriode;
 	private double amortisationsBetragPeriode;
-
 
 	public KapitalZinssatz kapitalZinssatz;
 
@@ -31,7 +34,7 @@ public class Tilgung extends DatenRecord {
 	}
 
 	public Tilgung(int pJahr, int pAbMonat, int pBisMonat) {
-		jahr = pJahr;
+		abJahr = pJahr;
 		abMonat = pAbMonat;
 		bisUndMitMonat = pBisMonat;
 	}

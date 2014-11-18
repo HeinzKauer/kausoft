@@ -5,12 +5,13 @@ package ch.kausoft.basic;
 
 import java.lang.reflect.Field;
 
-import ch.kausoft.KauSoft;
+
 
 /**
  * @author Heinz
+ * 
  */
-public class Daten extends KauSoft {
+public class Daten extends RecordID {
 
 	/**
 	 * @since created at 26.10.2007.22:11:27

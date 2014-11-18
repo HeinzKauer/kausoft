@@ -8,11 +8,6 @@ package ch.kausoft.kostenmiete;
  */
 public final class KapitalZinssatz {
 
-
-	
-  
-
-	
 	/**
 	 * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
 	 */
@@ -33,13 +28,13 @@ public final class KapitalZinssatz {
 	 * @param zinsIst
 	 * @param zinsRendite
 	 */
-	public KapitalZinssatz(int abJahr, double zinsOptimistisch,
-			double zinsPessimistisch, double zinsIst, double zinsRendite) {
+	public KapitalZinssatz(int abJahr, double zinsOptimistisch, double zinsPessimistisch, double zinsIst,
+			double zinsRendite) {
 		this(abJahr, 01, zinsOptimistisch, zinsPessimistisch, zinsIst, zinsRendite);
 	}
 
-	public KapitalZinssatz(int abJahr,int abMonat, double zinsOptimistisch,
-			double zinsPessimistisch, double zinsIst, double zinsRendite) {
+	public KapitalZinssatz(int abJahr, int abMonat, double zinsOptimistisch, double zinsPessimistisch, double zinsIst,
+			double zinsRendite) {
 		this.abJahr = abJahr;
 		this.abMonat = abMonat;
 		this.zins[0] = zinsOptimistisch;
@@ -48,7 +43,6 @@ public final class KapitalZinssatz {
 		this.zins[3] = zinsRendite;
 	}
 
-	
 	public int getAbJahr() {
 		return abJahr;
 	}

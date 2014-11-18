@@ -1,40 +1,70 @@
 package ch.kausoft.kostenmiete;
 
+import java.util.HashMap;
+
+import ch.kausoft.basic.DatenBB;
 import ch.kausoft.basic.DatenRecord;
+import ch.kausoft.basic.DatenSpeicher;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public final class Wohnung extends DatenRecord {
+public final class Wohnung extends DatenBB {
 
-	public Wohnung(String bezeichnung, String beschreibung) {
-		// TODO entfernen
-	}
+	/**
+	 * Wohnungsnummer
+	 */
+	private short nummer;
 
-	public Wohnung(Long pId, short pHausnummer, short pWohnungsnummer,
-			String bezeichnung, String beschreibung, double pFlaeche,
-			double bewertung) {
+	/**
+	 * Hausnummer
+	 */
+	private short hausnummer;
 
-		super();
-		setId(pId);
-		setHausnummer(getHausnummer());
+	/**
+	 * Wohnungsfläche
+	 */
+	private double flaeche;
+
+	/**
+	 * Bewertung der Wohnung
+	 */
+	private double bewertung;
+
+	/**
+	 * Gehört zur Liegenschaft 
+	 */
+	private Liegenschaft liegenschaft = null;
+
+	public Wohnung(Long pId, Liegenschaft liegenschaft,short pHausnummer, short pWohnungsnummer, String bezeichnung, String beschreibung,
+			double pFlaeche, double bewertung) {
+		super(pId, bezeichnung, beschreibung);
+		setLiegenschaft(liegenschaft);
+		setHausnummer(pHausnummer);
 		setNummer(pWohnungsnummer);
-		setBezeichnung(bezeichnung);
-		setBeschreibung(beschreibung);
 		setFlaeche(pFlaeche);
 		setBewertung(bewertung);
-
 	}
 
-	@NonNull
-	private String bezeichnung;
-	@NonNull
-	private String beschreibung;
-	private short nummer;
-	private short hausnummer;
-	private double flaeche;
-	private double bewertung;
+	/**
+	 * 
+	 */
+	public Wohnung() {
+		super();
+	}
+
+	/**
+	 * @since created at 09.02.2014.21:38:30
+	 * @return HashMap<Long,Wohnung>
+	 */
+	public static HashMap<Long, Wohnung> getAll() {
+		return DatenSpeicher.getDatenSpeicher().getWohnungen();
+	}
+	
+	public String toString() {
+		return "Wohnung " + getBezeichnung();
+	}
 
 }
