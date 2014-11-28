@@ -1,4 +1,4 @@
-readme
+readme.txt
 
 Ablagestruktur 
 doc/
