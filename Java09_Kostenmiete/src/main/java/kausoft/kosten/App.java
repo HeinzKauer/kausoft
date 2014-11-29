@@ -10,7 +10,7 @@ import ch.kausoft.wbg.daten.bo.InvestitionBO;
 import ch.kausoft.wbg.daten.bo.WohnungBO;
 
 /**
- * Hello world!
+ * Hello world! 14
  * 
  */
 public class App {
