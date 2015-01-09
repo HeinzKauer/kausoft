@@ -7,36 +7,53 @@ import java.util.Map;
 
 import ch.kausoft.context.Context;
 import ch.kausoft.context.SessionContext;
+import ch.kausoft.controller.useCases.DataPathUC;
 
 /**
+ * Ein UseCase ist gleich ein Anwendungsfall.
+ * 
+ * 
  * @author Heinz
  * 
  */
 public abstract class UseCase {
 
-	public Context getContext() {
-		return SessionContext.getContext();
-	}
+   public UseCase(String pUseCase_ID) {
+      setUsseCase(pUseCase_ID);
+   }
 
-	protected void setProperty(String pValue) {
-		setProperty(this.getClass().getName(), pValue);
-	}
+   // public static UseCase getInstance(){
+   // SessionContext.getContext().setActionResult(actionResult);
+   // }
 
-	protected void setProperty(String name, String pValue) {
-		getContext().getProperties().setProperty(this.getClass().getName(), pValue);
-	}
+   public Context getContext() {
+      return SessionContext.getContext();
+   }
 
-	protected String getProperty() {
-		return getContext().getProperties().getProperty(this.getClass().getName());
-	}
+   protected void setProperty(String pValue) {
+      setProperty("", pValue);
+   }
 
-	protected void setUsseCase() {
-		Map<String, UseCase> actionResult = getContext().getActionResult();
-		actionResult.put(this.getClass().getName(), this);
-	}
+   protected void setProperty(String pName, String pValue) {
+      getContext().getProperties().setProperty(
+            this.getClass().getName() + pName, pValue);
+   }
 
-	protected UseCase getUseCase() {
-		return getContext().getActionResult().get(this.getClass().getName());
-	}
+   protected String getProperty() {
+      return getContext().getProperties()
+            .getProperty(this.getClass().getName());
+   }
+
+   protected String getProperty(String pName) {
+      return getContext().getProperties().getProperty(
+            this.getClass().getName() + pName);
+   }
+
+
+   private void setUsseCase(String pUseCase_ID) {
+      Map<String, UseCase> actionResult = getContext().getUseCase();
+      actionResult.put(pUseCase_ID, this);
+   }
+
 
 }

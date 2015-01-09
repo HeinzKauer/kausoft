@@ -18,14 +18,14 @@ public class App {
 		System.out.println("Hello World!");
 
 		// UseCase DatenPath
-		DataPathUC dataPath = new DataPathUC();
+		DataPathUC dataPath = DataPathUC.getInstance();
 		System.out.println(dataPath.getDataPath());
 		dataPath
 				.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\InputDaten.csv");
 		System.out.println(dataPath.getDataPath());
 
 		// UseCase DatenSpeicher laden 
-		DatenSpeicherUC datenSpeicher = new  DatenSpeicherUC();
+		DatenSpeicherUC datenSpeicher =   DatenSpeicherUC.getInstance();
    //		daten.loadCSV(dataPath.getDataPath());
 
 		// UseCase DatenSpeicher laden
@@ -34,7 +34,7 @@ public class App {
 		datenSpeicher.loadFromExcel(dataPath.getDataPath());
 		
 		// UseCase Tilgungsplane Rechnen
-		TilgungsplanRechnenUC tpr = new TilgungsplanRechnenUC();
+		TilgungsplanRechnenUC tpr =  TilgungsplanRechnenUC.getInstance();
 		tpr.calculate(DatenSpeicher.getDatenSpeicher()); 
 		
 		// UseCase DatenSpeicher laden

@@ -16,6 +16,8 @@ import ch.kausoft.controller.UseCase;
  *
  */
 public class Context {
-	@Getter @Setter private Properties properties = new Properties();  
-  @Getter @Setter private Map<String, UseCase>  actionResult = new HashMap<String, UseCase>();  		
+   //@formatter:off
+   @Getter @Setter private Properties properties = new Properties();  
+   @Getter @Setter private Map<String, UseCase>  useCase = new HashMap<String, UseCase>();
+   //@formatter:on
 }

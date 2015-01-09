@@ -30,12 +30,12 @@ public class Kostenmiete {
 	 */
 	public static void main(String[] args) {
 
-		DataPathUC dataPath = new DataPathUC();
+		DataPathUC dataPath =  DataPathUC.getInstance();
 		dataPath.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\InputDaten.csv");
 		System.out.println(dataPath.getDataPath());
 
 		// UseCase DatenSpeicher laden
-		DatenSpeicherUC daten = new DatenSpeicherUC();
+		DatenSpeicherUC daten = DatenSpeicherUC.getInstance();
 		daten.loadFromExcel(dataPath.getDataPath());
 
 		new Kostenmiete().load(DatenSpeicher.getDatenSpeicher());
