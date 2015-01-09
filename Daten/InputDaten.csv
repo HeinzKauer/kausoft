@@ -1,0 +1,75 @@
+
+Typ,InvestieresKapital,ID,Bezeichnung,Beschreibung
+Typ,KapitalZinssatz,InvestieresKapitalID,abJahr,optimistisch,pessimistisch,Real ist,rendite
+Typ,Wohnung,ID,Hausnummer,Wohungummer,Bezeichnung,Beschreibung,Flaeche,Bewertung
+Typ,BeziehungX,Typ,Typ,ID,ID
+Typ,Beziehung1,
+
+InvestieresKapital,100,Mittelfristig,Hier werden Wohnungsrenovationen
+KapitalZinssatz,100,2000,2,3.15,2.78,6
+KapitalZinssatz,100,2012,2,3.15,2.78,6
+KapitalZinssatz,100,2015,2,3.15,2.78,6
+KapitalZinssatz,100,2017,2,3.15,2.78,6
+KapitalZinssatz,100,2020,2,3.15,2.78,6
+KapitalZinssatz,100,2999,2,3.15,2.78,6
+
+InvestieresKapital,200,Bund,Langfristiges Kapital vom Bund 
+KapitalZinssatz,200,2000,4.5,3.15,2.78,6
+KapitalZinssatz,200,2010,4.5,3.15,2.78,6
+KapitalZinssatz,200,2015,4.5,3.15,2,6
+KapitalZinssatz,200,2999,4.5,3.15,2,6
+
+Wohnung,1001,23,1,Keller,Friedli Fritz,70,66,
+Wohnung,1002,23,2,PL,Kauer,80,78,
+Wohnung,1003,23,3,PR,Fahrni,80,78,
+Wohnung,1004,23,4,1L,Wunderlin,80,81,
+Wohnung,1005,23,5,1R,Riser,80,81,
+Wohnung,1006,23,6,2L,ex Schweizer,80,85,
+Wohnung,1007,23,7,2R,Stamm,80,85,
+Wohnung,1008,25,8,Keller,Uzgur,70,67,
+Wohnung,1009,25,9,PL,Suetterle,80,78,
+Wohnung,1010,25,10,PR,Garni,60,69,
+Wohnung,1011,25,11,1L,Bozkurt,80,81,
+Wohnung,1012,25,12,1R,Marbach,60,72,
+Wohnung,1013,25,13,2L,Kasan,80,85,
+Wohnung,1014,25,14,2R,Grossenbacher,60,76,
+
+Typ,Investition,ID,InvestieresKapitalID,Bezeichnung,Beschreibung,Jahr,Monat,Betrag,LebensdauerJahre,AmortiasationDurchErneuerungsfon
+Typ,Mietzinsbeitrag,InvestitionID,Jahr,Monat,jaehrlicherMeitrag
+Typ,TilgungStrategie,Bewertungsindex
+Typ,TilgungStrategie,Wohnung
+
+
+Investition,195001,200,Liegenschaft,Technischer Wert der Liegenschaft Stand per 2010,2010,01,1700000,80,0
+Mietzinsbeitrag,195001,2010,01,1450
+TilgungStrategie,Bewertungsindex
+
+Investition,195002,100,Parketboden ,Parketboden in der gesamten Wohnung ausser Kueche und Bad 2013A,2013,11,9000,40,3000
+Mietzinsbeitrag,195002,2013,11,770
+TilgungStrategie,Wohnung,6,100
+
+Investition,195003,100,Elektro ,Elektroinstallationen ,2013,11,5000,30,3000
+Mietzinsbeitrag,195003,2013,11,770
+TilgungStrategie,Wohnung,6,100
+
+Investition,195004,100,WaendeW6 ,Waende,2013,11,14000,15,7000
+Mietzinsbeitrag,195004,2013,11,770
+TilgungStrategie,Wohnung,6,100
+
+Investition,195005,100,KuecheW5Stamm ,Die schon sehr lange nicht mehr renofierte Küche neu streichen. ,2013,11,1000,6,700
+Mietzinsbeitrag,195005,2013,11,770
+TilgungStrategie,Wohnung,7,100
+
+Investition,195006,100,Einbruchsicherung für Wohnung Uzgur ,Einbruchsicherung,2014,09,5500,20,1000
+Mietzinsbeitrag,195006,2014,09,120
+TilgungStrategie,Wohnung,8,100
+
+,,,,,,,
+Kosten,EBL Kabelanschluss,Beschreibung,Kommunikationsanschluss 19.60,,,,
+Kosten,EBL Kabelanschluss,Kosten,Nebenkosten,2013,3292.8,,,,,
+Kosten,EBL Kabelanschluss,Tilgung,Linear,,,,
+
+Info,Parketboden,Tilgung,Wohnung,,,,
+Info,Parketboden,Tilgung,Linear,,,,
+Info,Parketboden,Tilgung,Wohnflaeche,,,,
+Info,Parketboden,Tilgung,Bewertungsindex,,,,
