@@ -40,7 +40,7 @@ public class TilgungBO {
 	 * 
 	 * @param invest
 	 * @param zinsCase
-	 * @return
+	 * @return createTilgungTabelle
 	 */
 	private static List<Tilgung> createTilgungTabelle(InvestitionBO invest, int zinsCase) {
 		int aktivierungsJahr = invest.getInvetition().getAktivierungsJahr();

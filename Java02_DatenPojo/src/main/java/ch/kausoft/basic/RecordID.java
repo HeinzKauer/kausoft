@@ -52,7 +52,6 @@ public class RecordID {
 	 * <BR>
 	 * 
 	 * @since created at 30.07.2008.00:16:42
-	 * @param id
 	 * @return String
 	 */
 	public String getString() {

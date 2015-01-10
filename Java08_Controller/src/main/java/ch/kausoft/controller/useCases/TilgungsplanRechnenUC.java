@@ -1,5 +1,5 @@
-/**
- * 
+/*
+ * Copyright 2013 KauSoft by KauerInformatik. All rights reserved.
  */
 package ch.kausoft.controller.useCases;
 
@@ -29,12 +29,12 @@ public class TilgungsplanRechnenUC extends UseCase {
       return (uc == null) ? new TilgungsplanRechnenUC(pID) : uc;
    }
 
+   
    private TilgungsplanRechnenUC(String id) {
       super(id);
    }
 
    /**
-    * @param datenSpeicher
     * 
     */
    public void calculate() {
