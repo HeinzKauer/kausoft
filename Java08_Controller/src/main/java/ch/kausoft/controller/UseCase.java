@@ -1,5 +1,5 @@
 /*
- * 
+ * Copyright 2007 KauSoft by KauerInformatik. All rights reserved.
  */
 package ch.kausoft.controller;
 import java.util.Map;
