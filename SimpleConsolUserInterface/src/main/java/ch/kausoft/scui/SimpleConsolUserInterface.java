@@ -53,8 +53,8 @@ public class SimpleConsolUserInterface {
 		IOElement[] ioa = menue.getIOElements();
 
 		for (int i = 0; i < ioa.length; i++) {
-			ioa[i].getCommand();
-			menuTab.addZeile(new String[] { ioa[i].getCommand(), ioa[i].getHilfe() });
+			ioa[i].getActionID();
+			menuTab.addZeile(new String[] { ioa[i].getActionID(), ioa[i].getHilfe() });
 		}
 
 		boolean loop = true;
@@ -67,7 +67,7 @@ public class SimpleConsolUserInterface {
 
 			String upperStr = str.toUpperCase();
 			for (int i = 0; i < ioa.length; i++) {
-				if (ioa[i].getCommand().equals(upperStr)) {
+				if (ioa[i].getActionID().equals(upperStr)) {
 					loop = ioa[i].getCall() == null ? false 
 					: ioa[i].getCall().getAction() == null ? false 
 					: ioa[i].getCall().getAction().runMenueAction() ? false : true;

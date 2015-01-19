@@ -9,12 +9,32 @@ import lombok.Data;
  */
 @Data
 public class IOElement {
-	String command;
+
+	/**
+	 * Mit der Action-ID kann dann via Console eine Aktion die im Call
+	 * gespeichert ist, ausgeführt wern. 
+	 */
+	String actionID;
+
+	/**
+	 * Ein erklärender Text zur Action-ID 
+	 */
 	String hilfe;
+
+	/**
+	 * 
+	 */
 	String rueckmeldung;
+
+	/**
+	 * 
+	 */
 	MenueAction call;
 
 	/**
+	 * Bereritstellen eines IO Elementes.
+	 * 
+	 * 
 	 * @param command
 	 * @param hilfe
 	 * @param pCall
@@ -22,9 +42,15 @@ public class IOElement {
 	public IOElement(String command, String hilfe, IMenueAction pCall) {
 		System.out.println("150119-2253 \r" + command + "\r" + hilfe
 				+ "\r" + pCall);
-		setCommand((command == null) ? "" : command);
+		setActionID((command == null) ? "" : command);
 		setHilfe((hilfe == null) ? "" : hilfe);
-		setCall(new MenueAction(pCall));
+		setCall((pCall == null) ? new MenueAction(new IMenueAction() {
+			public boolean runMenueAction() {
+				// TODO Auto-generated method stub
+				return false;
+			}
+		}) : new MenueAction(pCall));
+		setRueckmeldung("");
 	}
 
 	/**
@@ -32,7 +58,7 @@ public class IOElement {
 	 * @return String
 	 */
 	public String display() {
-		return command + "   --> " + hilfe;
+		return actionID + "   --> " + hilfe;
 	}
 
 }
