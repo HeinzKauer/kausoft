@@ -12,43 +12,27 @@ public class IOElement {
 	String command;
 	String hilfe;
 	String rueckmeldung;
-	MenueAction call;	
-	
+	MenueAction call;
 
-
-
+	/**
+	 * @param command
+	 * @param hilfe
+	 * @param pCall
+	 */
 	public IOElement(String command, String hilfe, IMenueAction pCall) {
-		setCommand(command);
-		setHilfe(hilfe);
+		System.out.println("150119-2253 \r" + command + "\r" + hilfe
+				+ "\r" + pCall);
+		setCommand((command == null) ? "" : command);
+		setHilfe((hilfe == null) ? "" : hilfe);
 		setCall(new MenueAction(pCall));
 	}
 
-	public String getCommand() {
-		return command;
-	}
-
-	public void setCommand(String command) {
-		this.command = command;
-	}
-
-	public String getHilfe() {
-		return hilfe;
-	}
-
-	public void setHilfe(String hilfe) {
-		this.hilfe = hilfe;
-	}
-
+	/**
+	 * @since created at 19.01.2015.22:49:11
+	 * @return String
+	 */
 	public String display() {
 		return command + "   --> " + hilfe;
-	}
-
-	public String getRueckmeldung() {
-		return rueckmeldung;
-	}
-
-	public void setRueckmeldung(String rueckmeldung) {
-		this.rueckmeldung = rueckmeldung;
 	}
 
 }

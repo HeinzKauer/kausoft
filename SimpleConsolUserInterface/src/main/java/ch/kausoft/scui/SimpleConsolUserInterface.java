@@ -21,16 +21,15 @@ public class SimpleConsolUserInterface {
 	private String[] autoRun = new String[0];
 
 	private int autoRunCounter = 0;
-	
+
 	private InputStreamReader isr = new InputStreamReader(System.in);
-	
+
 	private BufferedReader br = new BufferedReader(isr);
 
-
 	public SimpleConsolUserInterface() {
-		
+
 	}
-	
+
 	public SimpleConsolUserInterface(String[] autoRunStringArray) {
 		setAutoRun(autoRunStringArray);
 	}
@@ -50,43 +49,40 @@ public class SimpleConsolUserInterface {
 	private void io(CUI cui) {
 
 		menue = cui.getUIMenu();
-//		content = cui.getContentTabelle();
+		// content = cui.getContentTabelle();
 		IOElement[] ioa = menue.getIOElements();
 
 		for (int i = 0; i < ioa.length; i++) {
 			ioa[i].getCommand();
-			menuTab.addZeile(new String[] {
-					ioa[i].getCommand(), ioa[i].getHilfe()
-			});
+			menuTab.addZeile(new String[] { ioa[i].getCommand(), ioa[i].getHilfe() });
 		}
 
-		
-			boolean loop = true;
-			while (loop) {
-				content = cui.getContentTabelle();
-				menuTab.out(content);
-				System.out.print("120404-0810: Code : ");
-				
-				
-				String str = lesenConsole(br);
-				
-				String upperStr = str.toUpperCase();
-				for (int i = 0; i < ioa.length; i++) {
-					if (ioa[i].getCommand().equals(upperStr)) {
-					loop = ioa[i].getCall() == null ? false
-							: ioa[i].getCall().getAction().  runMenueAction() ? false : true;
-						if (!loop) {
-							System.out.println("120404-0815: " + ioa[i].getRueckmeldung());
-						}
+		boolean loop = true;
+		while (loop) {
+			content = cui.getContentTabelle();
+			menuTab.out(content);
+			System.out.print("120404-0810: Code : ");
+
+			String str = lesenConsole(br);
+
+			String upperStr = str.toUpperCase();
+			for (int i = 0; i < ioa.length; i++) {
+				if (ioa[i].getCommand().equals(upperStr)) {
+					loop = ioa[i].getCall() == null ? false 
+					: ioa[i].getCall().getAction() == null ? false 
+					: ioa[i].getCall().getAction().runMenueAction() ? false : true;
+					if (!loop) {
+						System.out.println("120404-0815: " + ioa[i].getRueckmeldung());
 					}
 				}
 			}
-	
+		}
+
 	}
 
 	private String lesenConsole(BufferedReader br) {
 		String str;
-		
+
 		if (hasAutoRun()) {
 			str = getNextAutoRun();
 			System.out.println();
@@ -128,7 +124,7 @@ public class SimpleConsolUserInterface {
 		this.content = content;
 	}
 
-	public CUIMenu getMenue() { 
+	public CUIMenu getMenue() {
 		return menue;
 	}
 
@@ -138,12 +134,12 @@ public class SimpleConsolUserInterface {
 
 	public String inputText(String string) {
 
-//		InputStreamReader isr = new InputStreamReader(System.in);
-//		BufferedReader br = new BufferedReader(isr);
+		// InputStreamReader isr = new InputStreamReader(System.in);
+		// BufferedReader br = new BufferedReader(isr);
 
 		System.out.print("120403-1200: " + string + " : ");
 		return lesenConsole(br);
-		
+
 	}
 
 }
