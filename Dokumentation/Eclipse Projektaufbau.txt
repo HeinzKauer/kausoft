@@ -1,0 +1,12 @@
+Eclipse Projektaufbau
+
+
+
+Die Tests werden im Tomcat Testserver durchgeführt. 
+
+
+
+
+
+
+
