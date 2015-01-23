@@ -6,6 +6,7 @@
 
 */doc/*
 */target/*
+*/javadoc/*
 
 # Package Files #
 *.jar
@@ -53,7 +54,7 @@ TestCodes/
 
 RemoteSystemsTempFiles/
 
-Dokumentation/
+
 
 Applikation KauSoft/
 
