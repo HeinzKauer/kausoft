@@ -34,9 +34,9 @@ import java.util.ResourceBundle;
  * Buffer gespeichert. <BR>
  * <BR>
  * <b>Wiki=</b><A
- * HREF="http://kausoft.ch/wiki/index.php?search=ResourceBundle"
+ * HREF="http://notizbuch2014.heinzkauer.ch/mediawiki/index.php?search=ResourceBundle"
  * >ResourceBundle </A>,<A
- * HREF="http://kausoft.ch/wiki/index.php?search=0807.2923.4500">
+ * HREF="http://notizbuch2014.heinzkauer.ch/mediawiki/index.php?search=0807.2923.4500">
  * 0807.2923.4500 </A>
  * 
  * @since created at 29.07.2008.23:44:05

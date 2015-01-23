@@ -13,10 +13,10 @@ import ch.kausoft.attribut.META.AttributMetaData;
  * Sprachsteuerung für die Repräsentation. <BR>
  * <BR>
  * <b>Wiki:</b><br>
- * <A HREF="http://kausoft.ch/wiki/index.php?search=Attribut" >Attribut
+ * <A HREF="http://notizbuch2014.heinzkauer.ch/mediawiki/index.php?search=Attribut" >Attribut
  * </A> Das ist ein<br>
  * 
- * @see <A HREF="http://kausoft.ch/wiki/index.php?search=Attribut"
+ * @see <A HREF="http://notizbuch2014.heinzkauer.ch/mediawiki/index.php?search=Attribut"
  *      >Attribut</A>
  * @since created at 29.07.2008.23:19:18
  * @author Heinz Kauer by Kauer Informatik at 29.07.2008 Projekt = (

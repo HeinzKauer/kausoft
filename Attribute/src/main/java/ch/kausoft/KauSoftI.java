@@ -7,7 +7,7 @@ package ch.kausoft;
 
 /*
  * * <BR> <BR> <b>Wiki:</b><br> <A
- * HREF="http://kausoft.ch/wiki/index.php?search=KauSoftI" >KauSoftI</A>
+ * HREF="http://notizbuch2014.heinzkauer.ch/mediawiki/index.php?search=KauSoftI" >KauSoftI</A>
  * Das ist ein Text im Wiki.<br>
  * @author Heinz Kauer by Kauer Informatik at 11.04.2010 Projekt = (
  * Applikation KauSoft )
