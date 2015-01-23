@@ -38,6 +38,7 @@ public class Menu implements CUI {
 
 	class E implements IMenueAction {
 		public boolean runMenueAction() {
+//			getUIMenu().
 //			getIoElement().setRueckmeldung("- Ende der Verarbeitung -");
 			return true;
 		}

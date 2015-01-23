@@ -6,7 +6,7 @@ import java.util.Vector;
 /**
  * Console user interface Menu.
  * 
- * Ein CUI Menu besteht aus einer Menge von Iinput Oautput Elementen
+ * Ein CUIMenu besteht aus einer Menge von Iinput Output Elementen
  * Dem CUIMenu könne IOElement hinzugefügt werden
  * 
  * @author Heinz kauer

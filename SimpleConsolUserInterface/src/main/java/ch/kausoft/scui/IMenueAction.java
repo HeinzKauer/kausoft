@@ -6,7 +6,7 @@ package ch.kausoft.scui;
  * @author Heinz kauer
  */
 public interface IMenueAction {
-
+	
 	/**
 	 * 
 	 * @return true Aufgabe erledigt und zurück zu Vor-Menue; 
