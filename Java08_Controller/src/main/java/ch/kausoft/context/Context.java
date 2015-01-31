@@ -12,14 +12,18 @@ import lombok.Setter;
 import ch.kausoft.controller.UseCase;
 
 /**
+ * Im Context werden UseCase'is gespreichert
+ * 
  * @author Heinz
- *
  */
 public class Context {
-	//@formatter:off
-//   @Getter @Setter private Properties properties = new Properties();  
-   @Getter @Setter private Map<String, UseCase>  useCase = new HashMap<String, UseCase>();
-   //@formatter:on
+
+	/**
+	 * 
+	 */
+	@Getter
+	@Setter
+	private Map<String, UseCase> useCase = new HashMap<String, UseCase>();
 
 	/**
 	 * @since created at 31.01.2015.23:58:44
