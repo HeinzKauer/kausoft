@@ -3,6 +3,8 @@
  */
 package ch.kausoft.controller.useCases;
 
+import lombok.Getter;
+import lombok.Setter;
 import ch.kausoft.context.SessionContext;
 import ch.kausoft.controller.UseCase;
 
@@ -10,30 +12,47 @@ import ch.kausoft.controller.UseCase;
  * @author Heinz
  */
 public class DataPathUC extends UseCase {
-	public static final String ID = "DataPathUC";
 
-	private DataPathUC(String id) {
+	/**
+	 * 
+	 */
+	@Getter
+	@Setter
+	String dataPath = "/";
+
+	/**
+	 * 
+	 */
+	@Getter
+	@Setter
+	String dataName = "readme";
+
+	/**
+	 * 
+	 */
+	@Getter
+	@Setter
+	String dataType = "txt";
+
+	/**
+	 * @param id
+	 */
+	public DataPathUC(String id) {
 		super(id);
 	}
 
 	/**
-	 * @return DataPathUC
+	 * Test Main
+	 * 
+	 * @since created at 30.01.2015.22:13:36
+	 * @param args
+	 *          void
 	 */
-	public static DataPathUC getInstance() {
-		return getInstance(ID);
+	public static void main(String[] args) {
+
+		DataPathUC uc = new DataPathUC("4711");
+		SessionContext.getContext().add(uc);
+		System.out.println(uc.toString());
 	}
 
-	public static DataPathUC getInstance(String pID) {
-		DataPathUC uc = (DataPathUC) SessionContext.getContext().getUseCase().get(pID);
-		return (uc == null) ? new DataPathUC(pID) : uc;
-	}
-
-	public String getDataPath() {
-		String path = getContext().getProperties().getProperty(this.getClass().getName());
-		return (path == null) ? "/" : path;
-	}
-
-	public void setDataPath(String pPath) {
-		setProperty(pPath);
-	}
 }

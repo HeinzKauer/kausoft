@@ -16,7 +16,8 @@ public class SessionContext extends Context {
 	  
 	public static SessionContext getContext(){	
 		return SessionContext.session;
-	};	
+	}
+
 
 	
 }

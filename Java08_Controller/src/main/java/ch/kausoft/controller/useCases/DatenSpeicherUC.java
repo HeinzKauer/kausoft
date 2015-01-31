@@ -23,7 +23,7 @@ public class DatenSpeicherUC extends UseCase {
    public static final String ID = "DatenSpeicherUC";
 
    private DatenSpeicherUC(String id) {
-      super(id);
+      super(SessionContext.getContext(),id);
    }
 
    public static DatenSpeicherUC getInstance() {
