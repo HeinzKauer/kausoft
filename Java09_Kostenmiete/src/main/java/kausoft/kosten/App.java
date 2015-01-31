@@ -1,6 +1,7 @@
 package kausoft.kosten;
 
 import ch.kausoft.basic.DatenSpeicher;
+import ch.kausoft.context.SessionContext;
 import ch.kausoft.controller.useCases.DataPathUC;
 import ch.kausoft.controller.useCases.DatenSpeicherUC;
 import ch.kausoft.controller.useCases.TilgungsplanRechnenUC;
@@ -18,32 +19,37 @@ public class App {
 		System.out.println("Hello World!");
 
 		// UseCase DatenPath
-		DataPathUC dataPath = DataPathUC.getInstance();
+
+		DataPathUC dataPath = new DataPathUC("4711");
+		SessionContext.getContext().add(dataPath);
+
 		System.out.println(dataPath.getDataPath());
 		dataPath
 				.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\InputDaten.csv");
 		System.out.println(dataPath.getDataPath());
 
-		// UseCase DatenSpeicher laden 
-		DatenSpeicherUC datenSpeicher =   DatenSpeicherUC.getInstance();
-   //		daten.loadCSV(dataPath.getDataPath());
+		// UseCase DatenSpeicher laden
+		DatenSpeicherUC datenSpeicher = DatenSpeicherUC.getInstance();
+		// daten.loadCSV(dataPath.getDataPath());
 
 		// UseCase DatenSpeicher laden
-		dataPath.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\");
+		dataPath
+				.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\");
 		System.out.println(dataPath.getDataPath());
 		datenSpeicher.loadFromExcel(dataPath.getDataPath());
-		
+
 		// UseCase Tilgungsplane Rechnen
-		TilgungsplanRechnenUC tpr =  TilgungsplanRechnenUC.getInstance();
-		tpr.calculate(DatenSpeicher.getDatenSpeicher()); 
-		
+		TilgungsplanRechnenUC tpr = TilgungsplanRechnenUC.getInstance();
+		tpr.calculate(DatenSpeicher.getDatenSpeicher());
+
 		// UseCase DatenSpeicher laden
-		OutputExcel excel = DataIOExcel.getOutPutExcel(dataPath.getDataPath());
+		OutputExcel excel = DataIOExcel.getOutPutExcel(dataPath
+				.getDataPath());
 		InvestitionBO.fillSheet(excel.getInvestitionenSheet());
 		WohnungBO.fillSheet(excel.getWohnungenSheet());
 		datenSpeicher.save(excel);
-		
+
 		datenSpeicher.saveToExcel(dataPath.getDataPath());
-		
+
 	}
 }

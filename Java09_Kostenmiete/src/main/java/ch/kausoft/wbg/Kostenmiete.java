@@ -4,6 +4,7 @@ import java.util.List;
 
 import ch.kausoft.basic.DatenSpeicher;
 import ch.kausoft.basic.RecordID;
+import ch.kausoft.context.SessionContext;
 import ch.kausoft.controller.useCases.DataPathUC;
 import ch.kausoft.controller.useCases.DatenSpeicherUC;
 import ch.kausoft.kostenmiete.Investition;
@@ -30,7 +31,10 @@ public class Kostenmiete {
 	 */
 	public static void main(String[] args) {
 
-		DataPathUC dataPath =  DataPathUC.getInstance();
+		DataPathUC dataPath = new DataPathUC("4711");
+		SessionContext.getContext().add(dataPath);
+		
+		
 		dataPath.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\InputDaten.csv");
 		System.out.println(dataPath.getDataPath());
 

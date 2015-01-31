@@ -31,7 +31,7 @@ public class TilgungsplanRechnenUC extends UseCase {
 
    
    private TilgungsplanRechnenUC(String id) {
-      super(id);
+      super(SessionContext.getContext(),id);
    }
 
    /**
