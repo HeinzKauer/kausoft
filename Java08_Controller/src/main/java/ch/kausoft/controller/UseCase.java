@@ -36,39 +36,33 @@ public abstract class UseCase {
 	@Setter
 	private Context context;
 
+	/**
+	 * @param id
+	 */
 	protected UseCase(String id) {
 		useCase_ID = id;
 	}
 
-	/**
-	 * Der UC wirs in den Context gehängt.
-	 * 
-	 * @param pUseCase_ID
-	 */
-	protected UseCase(Context context, String pUseCase_ID) {
-		this.useCase_ID = pUseCase_ID;
-		setContext(context);
-		setUsseCase(((pUseCase_ID != null) ? pUseCase_ID : ""));
-	}
 
-	/**
-	 * @since created at 31.01.2015.00:45:42
-	 * @param context
-	 * @param id
-	 * @return UseCase
-	 */
-	public static UseCase loadInstance(Context context, String id) {
-		return (UseCase) context.getUseCase().get(id);
-	}
 
-	/**
-	 * @since created at 31.01.2015.00:45:45
-	 * @param pUseCase_ID
-	 *          void
-	 */
-	private void setUsseCase(String pUseCase_ID) {
-		Map<String, UseCase> actionResult = getContext().getUseCase();
-		actionResult.put(pUseCase_ID, this);
-	}
+//	/**
+//	 * @since created at 31.01.2015.00:45:42
+//	 * @param context
+//	 * @param id
+//	 * @return UseCase
+//	 */
+//	public static UseCase loadInstance(Context context, String id) {
+//		return (UseCase) context.getUseCase().get(id);
+//	}
+//
+//	/**
+//	 * @since created at 31.01.2015.00:45:45
+//	 * @param pUseCase_ID
+//	 *          void
+//	 */
+//	private void setUsseCase(String pUseCase_ID) {
+//		Map<String, UseCase> actionResult = getContext().getUseCase();
+//		actionResult.put(pUseCase_ID, this);
+//	}
 
 }

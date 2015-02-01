@@ -17,23 +17,26 @@ import ch.kausoft.wbg.daten.OutputExcel;
  * 
  */
 public class DatenSpeicherUC extends UseCase {
+	
+	public static final String ID = "DatenSpeicherUC";
 
    DatenSpeicher datenSpeicher;
 
-   public static final String ID = "DatenSpeicherUC";
 
    private DatenSpeicherUC(String id) {
-      super(SessionContext.getContext(),id);
+      super(id);
    }
+
+
 
    public static DatenSpeicherUC getInstance() {
-      return getInstance(ID);
-   }
-
-   public static DatenSpeicherUC getInstance(String pID) {
       DatenSpeicherUC uc = (DatenSpeicherUC) SessionContext.getContext()
-            .getUseCase().get(pID);
-      return (uc == null) ? new DatenSpeicherUC(pID) : uc;
+            .getUseCase().get(ID);
+      if (uc == null) {
+      	uc = new DatenSpeicherUC(ID);
+      	SessionContext.getContext().add(uc);
+      }      
+      return uc;
    }
 
 //   private DatenSpeicherUC(String id) {

@@ -1,22 +1,29 @@
 /**
- * 
+ * Copyright 2015 KauSoft by KauerInformatik. All rights reserved.
  */
 package ch.kausoft.context;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 import lombok.Getter;
 import lombok.Setter;
 import ch.kausoft.controller.UseCase;
 
 /**
- * Im Context werden UseCase'is gespreichert
- * 
+ * In einem Context werden die UseCases regristriert. Ein UseCase hatt
+ * immer genau einen Context, kann jedoch in mehreren Contexten
+ * gespeichert sein.
+ * <br>
+ * <br>
+ * Es gibt unterschiedliche Contexte 
+ * <li> Session 
+ * <li> BusinesObject
+ * <br><br>
  * @author Heinz
  */
 public class Context {
+
 
 	/**
 	 * 
