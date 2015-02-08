@@ -24,7 +24,6 @@ import ch.kausoft.controller.UseCase;
  */
 public class Context {
 
-
 	/**
 	 * 
 	 */
@@ -47,3 +46,4 @@ public class Context {
 	};
 
 }
+

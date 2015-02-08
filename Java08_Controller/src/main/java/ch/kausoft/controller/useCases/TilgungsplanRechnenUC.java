@@ -17,44 +17,38 @@ import ch.kausoft.wbg.daten.bo.TilgungBO;
  */
 public class TilgungsplanRechnenUC extends UseCase {
 
-	public static final String ID = "TilgungsplanRechnenUC";
+   public static final String ID = "TilgungsplanRechnenUC";
 
-	public static TilgungsplanRechnenUC getInstance() {
-		return getInstance(ID);
-	}
+   public static TilgungsplanRechnenUC getInstance() {
+      return getInstance(ID);
+   }
 
-	public static TilgungsplanRechnenUC getInstance(String pID) {
-		TilgungsplanRechnenUC uc = (TilgungsplanRechnenUC) SessionContext
-				.getContext().getUseCase().get(pID);
-		if (uc == null) {
-			uc = new TilgungsplanRechnenUC(pID);
-			SessionContext.getContext().add(uc);
-		}
+   public static TilgungsplanRechnenUC getInstance(String pID) {
+      TilgungsplanRechnenUC uc = (TilgungsplanRechnenUC) SessionContext
+            .getContext().getUseCase().get(pID);
+      return (uc == null) ? new TilgungsplanRechnenUC(pID) : uc;
+   }
 
-		return uc;
-	}
+   
+   private TilgungsplanRechnenUC(String id) {
+      super(id);
+   }
 
-	private TilgungsplanRechnenUC(String id) {
-		super(id);
-	}
-
-	/**
+   /**
     * 
     */
-	public void calculate() {
-		DatenSpeicher datenSpeicher = DatenSpeicher.getDatenSpeicher();
-		calculate(datenSpeicher);
-		// System.out.println( datenSpeicher);
-	}
+   public void calculate() {
+      DatenSpeicher datenSpeicher = DatenSpeicher.getDatenSpeicher();
+      calculate(datenSpeicher);
+      // System.out.println( datenSpeicher);
+   }
 
-	public void calculate(DatenSpeicher datenSpeicher) {
-		System.out
-				.println("tilgungsplanRechnen() --------------------------");
-		List<InvestitionBO> investitionen = InvestitionBO
-				.getInvestitionen();
-		for (InvestitionBO invBo : investitionen) {
-			TilgungBO.rechnenTilgungsplan(invBo);
-		}
-	}
+   public void calculate(DatenSpeicher datenSpeicher) {
+      System.out.println("tilgungsplanRechnen() --------------------------");
+      List<InvestitionBO> investitionen = InvestitionBO.getInvestitionen();
+      for (InvestitionBO invBo : investitionen) {
+         TilgungBO.rechnenTilgungsplan(invBo);
+      }
+   }
 
 }
