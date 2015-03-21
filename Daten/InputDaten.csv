@@ -19,6 +19,10 @@ KapitalZinssatz,200,2010,4.5,3.15,2.78,6
 KapitalZinssatz,200,2015,4.5,3.15,2,6
 KapitalZinssatz,200,2999,4.5,3.15,2,6
 
+InvestTabelle,300,Tabelle,Langfristiges
+KapitalZinssatz,300,2015,1,2,3,4
+
+
 Wohnung,1001,23,1,Keller,Friedli Fritz,70,66,
 Wohnung,1002,23,2,PL,Kauer,80,78,
 Wohnung,1003,23,3,PR,Fahrni,80,78,
@@ -56,13 +60,18 @@ Investition,195004,100,WaendeW6 ,Waende,2013,11,14000,15,7000
 Mietzinsbeitrag,195004,2013,11,770
 TilgungStrategie,Wohnung,6,100
 
-Investition,195005,100,KuecheW5Stamm ,Die schon sehr lange nicht mehr renofierte Küche neu streichen. ,2013,11,1000,6,700
+Investition,195005,100,KuecheW55555555555555Stamm ,Die schon sehr lange nicht mehr renofierte Küche neu streichen. ,2013,11,1000,6,700
 Mietzinsbeitrag,195005,2013,11,770
 TilgungStrategie,Wohnung,7,100
 
 Investition,195006,100,Einbruchsicherung für Wohnung Uzgur ,Einbruchsicherung,2014,09,5500,20,1000
 Mietzinsbeitrag,195006,2014,09,120
 TilgungStrategie,Wohnung,8,100
+
+Investition,195010,300,Tabelle ,T,2015,01,10000,20,0000
+Mietzinsbeitrag,195010,2015,01,120
+TilgungStrategie,Wohnung,8,100
+
 
 ,,,,,,,
 Kosten,EBL Kabelanschluss,Beschreibung,Kommunikationsanschluss 19.60,,,,

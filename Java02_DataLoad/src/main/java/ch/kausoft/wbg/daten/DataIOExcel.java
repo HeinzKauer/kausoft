@@ -44,6 +44,8 @@ public class DataIOExcel {
 	}
 
 	public void save(String path) {
+		System.out.println("150320-2310: - save(..) - " + path);
+
 		HSSFWorkbook wb = new HSSFWorkbook();
 		HSSFSheet sheetDaten = wb.createSheet("Daten");
 		HSSFSheet sheetInvestitionen = wb.createSheet("Invest");
@@ -111,21 +113,28 @@ public class DataIOExcel {
 	}
 
 	public void read(String path) {
-		try {
+		read(path, "ExcelInputfuerApp.xls");
+	}
 
-			InputStream inp = new FileInputStream(path + "ExcelInputfuerApp.xls");
+	public void read(String path, String fileName) {
+		System.out.println("15200:  - read(..) - " + path + "/" + fileName);
+
+		try {
+			InputStream inp = new FileInputStream(path + fileName);
 			Workbook wb = WorkbookFactory.create(inp);
 			Sheet sheet = wb.getSheetAt(0);
-			System.out.println(sheet.getSheetName());
+			System.out.println("re114: " + sheet.getSheetName());
 
 			for (int i_row = 0; i_row < sheet.getLastRowNum(); i_row++) {
 				Row row = sheet.getRow(i_row);
+
 				if (row != null) {
 					Cell cell = row.getCell(0);
 					if (cell != null) {
 						int typ = cell.getCellType();
 						if (typ == HSSFCell.CELL_TYPE_STRING) {
 							String value = cell.getStringCellValue().toUpperCase();
+							System.out.println("03658: " + value);
 							if (value.equals("TYP")) {
 								parsTypDef(row);
 							} else if (value.equals("DATA")) {
@@ -150,7 +159,7 @@ public class DataIOExcel {
 			Cell cell = row.getCell(3);
 			if (cell == null)
 				cell = row.createCell(3);
-			System.out.println(cell.getCellStyle());
+			System.out.println("050231-1422: " + cell.getCellStyle());
 
 			// cell.setCellStyle(
 			// cell.setCellType(Cell.CELL_TYPE_NUMERIC);
@@ -175,6 +184,8 @@ public class DataIOExcel {
 	 *          void
 	 */
 	private void selectParsData(Row row) {
+		System.out.println("150320-2300: " + row.getRowNum() + " - selectParsData(..) - ");
+
 		Cell cell = row.getCell(1);
 		if (cell != null) {
 			int type = cell.getCellType();
@@ -190,7 +201,8 @@ public class DataIOExcel {
 
 	// private void read_Alt() {
 	// try {
-	// String path = "C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\";
+	// String path =
+	// "C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\";
 	// InputStream inp = new FileInputStream(path + "workbook.xls");
 	// Workbook wb = WorkbookFactory.create(inp);
 	// Sheet sheet = wb.getSheetAt(0);
@@ -249,7 +261,8 @@ public class DataIOExcel {
 	// wb.createSheet("sheetname");
 	//
 	// // Write the output to a file
-	// FileOutputStream fileOut = new FileOutputStream(path + "workbooko.xls");
+	// FileOutputStream fileOut = new FileOutputStream(path +
+	// "workbooko.xls");
 	// wb.write(fileOut);
 	// fileOut.close();
 	// } catch (Exception e) {
@@ -265,9 +278,11 @@ public class DataIOExcel {
 	 *          void
 	 */
 	private void parsDatenRow(Row rType, Row row) {
+		System.out.println("pd001: row-" + row.getRowNum() + " parsDatenRow(..)");
+
 		Cell cell = rType.getCell(1);
 		String stringCellValue = cell.getStringCellValue();
-		System.out.println(stringCellValue);
+		System.out.println("pd002: " + stringCellValue);
 		if (stringCellValue.equalsIgnoreCase("InvestieresKapital")) {
 			DataParser.parsInvestiertesKapital(rType, row);
 		} else if (stringCellValue.equalsIgnoreCase("KapitalZinssatz")) {
@@ -302,17 +317,19 @@ public class DataIOExcel {
 	 *          void
 	 */
 	private void parsTypDef(Row row) {
+		System.out.println("typ01: parsTypDef(..)");
 		Cell cell = row.getCell(1);
 		String stringCellValue = cell.getStringCellValue();
 		metaDatenTypenDefinitionen.put(stringCellValue, row);
 
+		System.out.print("typ02: " + row.getRowNum() + " - ");
 		for (int i_cell = 0; i_cell < row.getLastCellNum(); i_cell++) {
 			cell = row.getCell(i_cell);
 			if (cell != null) {
 				int cellType = cell.getCellType();
 				if (cellType == HSSFCell.CELL_TYPE_STRING) {
 					stringCellValue = cell.getStringCellValue();
-					System.out.print(stringCellValue + " , ");
+					System.out.println("typ03: , " + stringCellValue);
 				}
 			}
 		}

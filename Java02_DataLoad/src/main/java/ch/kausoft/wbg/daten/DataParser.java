@@ -43,6 +43,7 @@ public class DataParser {
 	 *          void
 	 */
 	public static void parsInvestiertesKapital(Row rType, Row row) {
+		System.out.println("150320-2302: "+  row.getRowNum() +  " parsInvestiertesKapital(..)");
 		DatenSpeicher ds = DatenSpeicher.getDatenSpeicher();
 		Long pId = new Long(-1);
 		String pBezeichnung = "";
@@ -51,7 +52,7 @@ public class DataParser {
 			Cell cell = rType.getCell(i_cell);
 			Cell cellData = row.getCell(i_cell);
 			String stringCellValue = cell.getStringCellValue();
-			System.out.println(stringCellValue);
+			System.out.println("pIK03: "+stringCellValue);
 			if (stringCellValue.equalsIgnoreCase("ID")) {
 				pId = (long) cellData.getNumericCellValue();
 			} else if (stringCellValue.equalsIgnoreCase("Bezeichnung")) {
@@ -68,6 +69,8 @@ public class DataParser {
 	 * @param d
 	 */
 	public static void parsKapitalZinssatz(String[] d) {
+		System.out.println("22301:     parsInvestiertesKapital(.[].)");
+
 		DatenSpeicher ds = DatenSpeicher.getDatenSpeicher();
 		int abJahr = Integer.parseInt(d[2]);
 		double zinsOptimistisch = Double.parseDouble(d[3]);
@@ -87,6 +90,9 @@ public class DataParser {
 	 *          void
 	 */
 	public static void parsKapitalZinssatz(Row rType, Row row) {
+		
+		System.out.println("150320-2304: "+  row.getRowNum() +  " parsKapitalZinssatz(..)");
+
 		DatenSpeicher ds = DatenSpeicher.getDatenSpeicher();
 		long investID = -1;
 		int abJahr = -1;
@@ -102,7 +108,7 @@ public class DataParser {
 				continue;
 			Cell cellData = row.getCell(i);
 			String stringCellValue = cell.getStringCellValue();
-			System.out.println(stringCellValue);
+			System.out.println("pKZ03: "+stringCellValue);
 			if (stringCellValue.equalsIgnoreCase("IKID")) {
 				investID = (long) cellData.getNumericCellValue();
 			} else if (stringCellValue.equalsIgnoreCase("abJahr")) {
@@ -133,6 +139,7 @@ public class DataParser {
 	 *          void
 	 */
 	public static void parsWohnung(Row rType, Row row) {
+		System.out.println("150320-2305: parsWohnung(..)");
 		DatenSpeicher ds = DatenSpeicher.getDatenSpeicher();
 		long id = -1;
 		long liegenschaftID = -1;
@@ -149,7 +156,7 @@ public class DataParser {
 				continue;
 			Cell cellData = row.getCell(i);
 			String stringCellValue = cell.getStringCellValue();
-			System.out.println(stringCellValue);
+			System.out.println(" pWo03: " +stringCellValue);
 			if (stringCellValue.equalsIgnoreCase("ID")) {
 				id = (long) cellData.getNumericCellValue();
 			} else if (stringCellValue.equalsIgnoreCase("LiegenschaftID")) {
@@ -182,6 +189,7 @@ public class DataParser {
 	 *          void
 	 */
 	public static void parsWohnung(String[] d) {
+		System.out.println("150320-2307: parsWohnung(..)");
 
 		DatenSpeicher ds = DatenSpeicher.getDatenSpeicher();
 		Long id = new Long(d[1]);
@@ -222,7 +230,7 @@ public class DataParser {
 				continue;
 			Cell cellData = row.getCell(i_cell);
 			String stringCellValue = cell.getStringCellValue();
-			System.out.println(stringCellValue);
+			System.out.println("pIv05: "+stringCellValue);
 			if (stringCellValue.equalsIgnoreCase("ID")) {
 				id = (long) cellData.getNumericCellValue();
 			} else if (stringCellValue.equalsIgnoreCase("InvestieresKapitalID")) {
@@ -290,7 +298,7 @@ public class DataParser {
 				continue;
 			Cell cellData = row.getCell(i);
 			String stringCellValue = cell.getStringCellValue();
-			System.out.println(stringCellValue);
+			System.out.println("pLi03: "+stringCellValue);
 
 			if (stringCellValue.equalsIgnoreCase("ID")) {
 				id = (long) cellData.getNumericCellValue();
@@ -329,7 +337,7 @@ public class DataParser {
 				continue;
 			Cell cellData = row.getCell(i);
 			String stringCellValue = cell.getStringCellValue();
-			System.out.println(stringCellValue);
+			System.out.println("psd02: "+stringCellValue);
 			if (stringCellValue.equalsIgnoreCase("ID")) {
 				id = (long) cellData.getNumericCellValue();
 			} else if (stringCellValue.equalsIgnoreCase("Bezeichnung")) {
@@ -361,7 +369,7 @@ public class DataParser {
 				continue;
 			Cell cellData = row.getCell(i);
 			String stringCellValue = cell.getStringCellValue();
-			System.out.println(stringCellValue);
+			System.out.println("pTS02: "+stringCellValue);
 
 			if (stringCellValue.equalsIgnoreCase("InvestitionID")) {
 				lnvestitionID = (long) cellData.getNumericCellValue();
@@ -439,7 +447,7 @@ public class DataParser {
 
 			Cell cellData = row.getCell(i);
 			String stringCellValue = cell.getStringCellValue();
-			System.out.println(stringCellValue);
+			System.out.println("pTI03: "+stringCellValue);
 
 			if (stringCellValue.equalsIgnoreCase("InvestitionID")) {
 				lnvestitionID = (long) cellData.getNumericCellValue();

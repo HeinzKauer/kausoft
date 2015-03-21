@@ -18,10 +18,10 @@ public class TilgungBO {
 		for (ZinsCase day : ZinsCase.values()) {
 			int i = day.ordinal();
 			workList[i] = createTilgungTabelle(invest, i);
-			System.out.println(day.name() + " " + day.ordinal());
+			System.out.println("rTP78: "+day.name() + " " + day.ordinal());
 			rechnen(workList[i], invest.getInvetition().getTilgungDurchAmortisation());
 		}
-//		list(workList);
+		// list(workList);
 		invest.getInvetition().setTilgungList(workList);
 	}
 
@@ -31,7 +31,7 @@ public class TilgungBO {
 	private static void list(List<Tilgung>[] workList) {
 		for (List<Tilgung> list : workList) {
 			for (Tilgung tilgung : list) {
-				System.out.println(tilgung);
+				System.out.println("l1247: "+tilgung);
 			}
 		}
 	}
@@ -129,6 +129,10 @@ public class TilgungBO {
 	private static double rechnenIntern(double investition, double jaehrlicherMietzinsbeitrag, List<Tilgung> pTilgungWork) {
 		List<Tilgung> tilgungWork = pTilgungWork;
 		double resrschuld = investition;
+		if (tilgungWork.isEmpty()) {
+			System.out.println("ERI12: Fehler im rechnen Intern gefunden. keine Tilgung ");
+			resrschuld =0;
+		}
 		for (Tilgung work : tilgungWork) {
 			work.setBetrag(resrschuld);
 			resrschuld = rechnenJaehrlicheBeitraege(jaehrlicherMietzinsbeitrag, work);
@@ -142,7 +146,7 @@ public class TilgungBO {
 	 * @return restschuld
 	 */
 	public static double rechnenJaehrlicheBeitraege(double jaehrlicherMietzinsbeitrag, Tilgung work) {
-
+		System.out.println("rJB01: " + jaehrlicherMietzinsbeitrag);
 		double zbj = work.getBetrag() * work.getZins() / 100;
 		double abj = jaehrlicherMietzinsbeitrag - zbj;
 		work.setZinsBetragJahr(zbj);

@@ -25,7 +25,8 @@ public class App {
 
 		System.out.println(dataPath.getDataPath());
 		dataPath
-				.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\InputDaten.csv");
+				.setDataPath("C:\\Development\\gitHub\\kausoftFromGithub\\Daten\\InputDaten.csv");
+		System.out.println(dataPath.getDataPath());
 		System.out.println(dataPath.getDataPath());
 
 		// UseCase DatenSpeicher laden
@@ -34,7 +35,7 @@ public class App {
 
 		// UseCase DatenSpeicher laden
 		dataPath
-				.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\");
+				.setDataPath("C:\\Development\\gitHub\\kausoftFromGithub\\Daten\\");
 		System.out.println(dataPath.getDataPath());
 		datenSpeicher.loadFromExcel(dataPath.getDataPath());
 
@@ -45,7 +46,7 @@ public class App {
 		// UseCase DatenSpeicher laden
 		OutputExcel excel = DataIOExcel.getOutPutExcel(dataPath
 				.getDataPath());
-		InvestitionBO.fillSheet(excel.getInvestitionenSheet());
+		InvestitionBO.fillSheet(excel.getInvestitionenSheet());		
 		WohnungBO.fillSheet(excel.getWohnungenSheet());
 		datenSpeicher.save(excel);
 

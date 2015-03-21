@@ -77,7 +77,7 @@ public class Menu implements CUI {
 			System.out.println(dataPath.getDataPath());
 
 			dataPath
-					.setDataPath("C:\\Development\\gitHub\\kausoftFromGithub\\Daten\\");
+			.setDataPath("C:\\Development\\gitHub\\kausoftFromGithub\\Daten\\");
 			System.out.println(dataPath.getDataPath());
 
 			// UseCase DatenSpeicher laden

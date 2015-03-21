@@ -30,7 +30,7 @@ public class TilgungWert {
 
 	public void addWert(Long id, double w) {
 		if (wert.get(id) != null) {
-			throw new IllegalArgumentException("140730-0020");
+			throw new IllegalArgumentException("ETW01: Fehler Doppelter Wert für dieselbe Wohnung.");
 		}
 		;
 		wert.put(id, w);

@@ -101,16 +101,16 @@ public class Kostenmiete {
 	// }
 
 	private void tilgungsplanRechnen(DatenSpeicher datenSpeicher) {
-		System.out.println("tilgungsplanRechnen() --------------------------");
+		System.out.println("tpr01: tilgungsplanRechnen()");
 
 		for (Investition inv : datenSpeicher.getInvestitionen().values()) {
-			System.out.println(inv);
+			System.out.println("tpr01: "+ inv);
 
 			InvestitionBO invBo = new InvestitionBO(inv);
 			invBo.getInvetition().getLebensdauerInJahre();
 			TilgungBO.rechnenTilgungsplan(invBo);
 
-			System.out.println();
+			System.out.println("tpr03: ");
 
 			//
 			// TilgungBO t = new TilgungBO(invBo, ZinsCase.zinsIst);
