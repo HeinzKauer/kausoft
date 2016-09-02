@@ -14,7 +14,7 @@ import ch.kausoft.kostenmiete.Wohnung;
 import ch.kausoft.kostenmiete.KapitalZinssatz;
 
 /**
- * Laden der Daten..
+ * Laden der Daten.. und Jetzt mit Drü 
  * 
  * @author Heinz
  * 
