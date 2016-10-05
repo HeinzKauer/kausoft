@@ -1,6 +1,8 @@
 /**
  * Copyright 2009 KauSoft by KauerInformatik. All rights reserved. <BR>
  * 
+ * so lange ist es her
+ * 
  * @since created at 04.05.2009.22:33:11
  */
 
