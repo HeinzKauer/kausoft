@@ -1,7 +1,7 @@
 /**
  * Copyright 2009 KauSoft by KauerInformatik. All rights reserved. <BR>
  * 
- * so lange ist es her
+ * so lange ist es her auch hier kann ich Ã¤ndern
  * 
  * @since created at 04.05.2009.22:33:11
  */
@@ -27,7 +27,7 @@ package ch.kausoft.attribut.CODE;
 public class Sprache extends Code {
 
 	/**
-	 * Repräsentiert den Sprachcode ? und meint damit, die Sprache ist
+	 * ReprÃ¤sentiert den Sprachcode ? und meint damit, die Sprache ist
 	 * nicht definiert. Es werden neutrale oder technische Informationen
 	 * an der Stelle von Text verwendet. <br>
 	 * <BR>
@@ -53,7 +53,7 @@ public class Sprache extends Code {
 	public static final char SPRACHE_ENGLISCH = 'E';
 
 	/**
-	 * französisch. <BR>
+	 * franzÃ¶sisch. <BR>
 	 * 
 	 * @since created at 29.07.2008.23:07:34
 	 */
