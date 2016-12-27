@@ -28,3 +28,7 @@ mvn archetype:generate -DgroupId=ch.kausoft.attribut -DartifactId=KauSoftAttribu
 
 in Eclipse maven Import
 
+
+161227-1100 
+See auch in https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+mvn archetype:generate -DgroupId=ch.kausoft.attribut -DartifactId=Attribute -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
