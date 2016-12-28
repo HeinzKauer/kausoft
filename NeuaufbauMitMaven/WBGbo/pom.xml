@@ -1,22 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
-	<groupId>ch.kausoft.attribut</groupId>
-	<artifactId>Attribute</artifactId>
+	<groupId>ch.kausoft.wbg.date.bo</groupId>
+	<artifactId>WBGbo</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>Attribute</name>
+	<name>WBGbo</name>
 	<url>http://maven.apache.org</url>
-
-	<!-- Parent -->
-	<parent>
-		<groupId>ch.kausoft.maven</groupId>
-		<artifactId>KauSoftBuildRoot</artifactId>
-		<version>1.0-SNAPSHOT</version>
-		<relativePath />
-	</parent>
-
+	
 	<dependencies>
 
 		<dependency>
@@ -25,10 +16,20 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		
-		<!-- <dependency> <groupId>org.projectlombok</groupId> <artifactId>lombok</artifactId> 
-			<version>1.16.6</version> <scope>provided</scope> </dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+ 
+ 		<dependency>
+			<groupId>ch.kausoft.attribut</groupId>
+			<artifactId>Attribute</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.kausoft.pojo</groupId>
+			<artifactId>Pojo</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -42,6 +43,12 @@
 			<version>3.9</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.6</version>
+			<scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 </project>

@@ -1,0 +1,444 @@
+<FindBugsFilter>
+  <Match>
+    <Package name="~.*[/\\]allgemein[/\\]texte[/\\].*" />
+    <Package name="~.*[/\\]codes[/\\]allgemein[/\\].*" />
+    <Package name="~.*[/\\]codes[/\\]kl[/\\].*" />
+    <Package name="~.*[/\\]codes[/\\]parsys[/\\].*" />
+  </Match>
+
+  <!-- Zie2klService -->
+  <!-- Generated code does not follow naming conventions -->
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/>
+    <Class name="~ch\.basler\.zie\.kl\.service\.kontoauszug\.request\..*"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/>
+    <Class name="~ch\.basler\.zie\.kl\.service\.kontoauszug\.response\..*"/>
+  </Match>
+  
+  <!-- GwtBase -->
+  <!-- Generated code does not follow naming conventions -->
+  <Match>
+    <Bug pattern="NM_CLASS_NAMING_CONVENTION"/>
+    <Class name="~.*\$e[a-zA-Z]*"/>
+  </Match>
+
+  <!-- GWT Compiler is different than Java -->
+  <Match>
+    <Bug pattern="SE_BAD_FIELD"/>
+    <Class name="ch.basler.gwt.base.common.dataobject.Context"/>
+  </Match>
+  <Match>
+    <Bug pattern="EQ_COMPARETO_USE_OBJECT_EQUALS,EQ_SELF_USE_OBJECT,HE_EQUALS_USE_HASHCODE,NP_NULL_PARAM_DEREF"/>
+    <Class name="ch.basler.gwt.base.common.datatype.GwtBaseDate"/>
+  </Match>
+
+  <!-- W -->
+  <Match>
+    <Bug pattern="URF_UNREAD_FIELD" />
+    <Class name="ch.basler.gwt.base.common.formatter.AbstractRPFactory$RPDescrType"/>
+  </Match>
+
+  <!-- Class too big to analyze -->
+  <Match>
+    <Class name="ch.basler.gwt.base.client.helper.ZszkMeldungTest"/>
+  </Match>
+
+  <!-- Menu bars function using String references -->
+  <Match>
+    <Bug pattern="ES_COMPARING_STRINGS_WITH_EQ"/>
+    <Class name="ch.basler.gwt.base.client.mvc.AbstractMenuBar"/>
+  </Match>
+
+  <!-- Menu bars functionality is coded poorly -->
+  <Match>
+    <Bug pattern="DE_MIGHT_IGNORE"/>
+    <Class name="ch.basler.gwt.base.client.mvc.AbstractMenuBar"/>
+  </Match>
+  <Match>
+    <Bug pattern="DE_MIGHT_IGNORE"/>
+    <Class name="ch.basler.gwt.base.client.widgets.standard.DODateBox"/>
+  </Match>
+
+  <!-- GWT Single-Threading makes this a non-issue -->
+  <Match>
+    <Bug pattern="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD"/>
+    <Class name="ch.basler.gwt.base.client.upload.Uploader"/>
+  </Match>
+
+  <!--  GWT Javascript does not have the same String inefficiency as Java -->
+  <Match>
+    <Bug pattern="SBSC_USE_STRINGBUFFER_CONCATENATION"/>
+    <Class name="~ch\.basler\.gwt\.base\.client\..*"/>
+  </Match>
+
+  <!--  The NullPointer in this scenario is caught -->
+  <Match>
+    <Bug pattern="NP_NULL_ON_SOME_PATH"/>
+    <Class name="ch.basler.gwt.base.client.upload.Uploader$9"/>
+  </Match>
+
+  <!--  Poorly coded implementation -->
+  <Match>
+    <Bug pattern="NP_BOOLEAN_RETURN_NULL"/>
+    <Class name="ch.basler.gwt.base.server.formatter.BooleanRendererParser"/>
+  </Match>
+  <Match>
+    <Bug pattern="NP_BOOLEAN_RETURN_NULL"/>
+    <Class name="ch.basler.gwt.base.client.widgets.formatter.BooleanRendererParser"/>
+  </Match>
+
+  <!--  The code seems to work as-is -->
+  <Match>
+    <Bug pattern="IA_AMBIGUOUS_INVOCATION_OF_INHERITED_OR_OUTER_METHOD"/>
+    <Class name="ch.basler.gwt.base.client.upload.Uploader$1"/>
+  </Match>
+
+  <!--  GWT Javascript is single threaded, so this defect can never appear -->
+  <Match>
+    <Bug pattern="LI_LAZY_INIT_UPDATE_STATIC"/>
+    <Class name="~ch\.basler\.gwt\.base\.client\..*"/>
+  </Match>
+
+  <!--  Someone names this class Exception even through it is not an exception -->
+  <Match>
+    <Bug pattern="NM_CLASS_NOT_EXCEPTION"/>
+    <Class name="ch.basler.gwt.base.common.InformationException"/>
+  </Match>
+
+  <!-- This is a Serialization warning that won't be a problem in javascript -->
+  <Match>
+    <Bug pattern="SE_BAD_FIELD"/>
+    <Class name="~ch\.basler\.gwt\.base\.client\.upload\.IFileInput\$FileInputType.*"/>
+  </Match>
+
+  <!-- Why is this OK? -->
+  <Match>
+    <Bug pattern="URF_UNREAD_FIELD"/>
+    <Class name="ch.basler.gwt.base.common.formatter.AbstractRPFactory$RPDescrType.eType"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+    <Class name="ch.basler.gwt.base.common.AbstractManager"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+    <Class name="ch.basler.gwt.base.client.mvc.AbstractStepView"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+    <Class name="ch.basler.gwt.base.client.widgets.standard.DOComboBoxString"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+    <Class name="ch.basler.gwt.base.client.widgets.DOTableViewColumn"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+    <Class name="ch.basler.gwt.base.common.dataobject.DescrReadService"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP2"/>
+    <Class name="ch.basler.gwt.base.common.dataobject.DescrType"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP"/>
+    <Class name="ch.basler.gwt.base.client.widgets.standard.DOComboBoxString"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP"/>
+    <Class name="ch.basler.gwt.base.common.model.DODoc"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP"/>
+    <Class name="ch.basler.gwt.base.common.dataobject.DescrReadService"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP"/>
+    <Class name="ch.basler.gwt.base.common.dataobject.DescrType"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP"/>
+    <Class name="ch.basler.gwt.base.common.model.Parameter"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="DM_GC"/>
+    <Class name="ch.basler.gwt.base.server.MemoryMeter"/>
+  </Match>
+  
+    <Match>
+    <Bug pattern="MS_SHOULD_BE_FINAL"/>
+    <Class name="ch.basler.kl.bvg.server.codes.kl.KLCodes"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="J2EE_STORE_OF_NON_SERIALIZABLE_OBJECT_INTO_SESSION"/>
+    <Class name="ch.basler.kl.bvg.server.KLBVGServerMgr"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="NP_BOOLEAN_RETURN_NULL"/>
+    <Class name="ch.basler.kl.bvg.server.formatter.BooleanRendererParser"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING"/>
+    <Class name="ch.basler.kl.bvg.server.persistence.PaktDAOB2B"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="REC_CATCH_EXCEPTION"/>
+    <Class name="ch.basler.kl.bvg.server.serviceaccess.SADOVorzeitigePensionierung"/>
+  </Match>
+  <Match>
+    <Bug pattern="REC_CATCH_EXCEPTION"/>
+    <Class name="ch.basler.kl.bvg.server.serviceaccess.AnfrageEmailer"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="NM_CLASS_NOT_EXCEPTION"/>
+    <Class name="ch.basler.kl.bvg.common.InformationException"/>
+  </Match>
+
+  <!-- I am too scared to remove these warnings -->
+  <Match>
+    <Bug pattern="DLS_DEAD_LOCAL_STORE"/>
+    <Class name="ch.basler.kl.bvg.common.model.DOPolice"/>
+  </Match>
+  <Match>
+    <Bug pattern="DLS_DEAD_LOCAL_STORE"/>
+    <Class name="ch.basler.kl.bvg.common.model.DOUser"/>
+  </Match>
+
+  <!--   No point changing generated code -->
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP"/>
+    <Class name="ch.basler.kl.bvg.common.model.DOUser"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="SE_BAD_FIELD"/>
+    <Class name="ch.basler.kl.bvg.server.KLBVGDOServiceImpl"/>
+  </Match>
+  <Match>
+    <Bug pattern="DLS_DEAD_LOCAL_STORE"/>
+    <Class name="ch.basler.kl.bvg.server.KLBVGDOServiceImpl"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="WMI_WRONG_MAP_ITERATOR"/>
+    <Class name="ch.basler.kl.bvg.client.base.AbstractAnfrageBerechnungView"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="NP_NULL_ON_SOME_PATH"/>
+    <Class name="ch.basler.kl.bvg.client.base.AbstractAnfrageBerechnungController"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE"/>
+    <Class name="ch.basler.kl.bvg.client.base.AbstractAnfrageBerechnungView"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="SBSC_USE_STRINGBUFFER_CONCATENATION"/>
+    <Class name="ch.basler.kl.bvg.client.base.AbstractAnfrageBerechnungView"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="DLS_DEAD_LOCAL_STORE"/>
+    <Class name="ch.basler.kl.bvg.client.bos.BOVorbezugWEFPolice$1"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="MS_PKGPROTECT"/>
+    <Class name="ch.basler.kl.bvg.common.model.KLBVGRelations"/>
+  </Match>
+  
+  <!-- NewBLD -->
+  <Match>
+    <Package name="~ch.basler.newbld.common.model.*" />
+  </Match>
+  <Match>
+    <Class name="~.*NewBLDTypeMgr.*" />
+  </Match>
+  
+  <Match>
+    <Bug pattern="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING"/>
+    <Class name="~.*AuftragOperationsImpl.*" />
+  </Match>
+  <Match>
+    <Bug pattern="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING"/>
+    <Class name="~.*GenericAuftragDAO.*" />
+  </Match>
+
+  <Match>
+    <Bug pattern="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD"/>
+    <Class name="ch.basler.newbld.server.parser.AbstractExcelParserBase"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE"/>
+    <Class name="ch.basler.newbld.gui.client.NewBLDApp"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING"/>
+    <Class name="ch.basler.kl.bld.persistence.SQLHelper"/>
+  </Match>
+  <Match>
+    <Bug pattern="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING"/>
+    <Class name="ch.basler.kl.bld.persistence.VertragDAO_Pakt"/>
+  </Match>
+  <Match>
+    <Bug pattern="UWF_UNWRITTEN_FIELD"/>
+    <Class name="ch.basler.newbld.gui.client.ucm.vertraege.VertraegeView"/>
+  </Match>
+  <Match>
+    <Bug pattern="NP_UNWRITTEN_FIELD"/>
+    <Class name="ch.basler.newbld.gui.client.ucm.vertraege.VertraegeView"/>
+  </Match>
+  <Match>
+    <Bug pattern="REC_CATCH_EXCEPTION"/>
+    <Class name="ch.basler.newbld.server.excel.composer.ExcelComposer"/>
+  </Match>
+  <Match>
+    <Bug pattern="RC_REF_COMPARISON_BAD_PRACTICE"/>
+    <Class name="ch.basler.newbld.server.excel.mapper.common.MappingZivilstandCode"/>
+  </Match>
+  <Match>
+    <Bug pattern="RC_REF_COMPARISON_BAD_PRACTICE"/>
+    <Class name="ch.basler.newbld.server.parser.AbstractExcelParserBase"/>
+  </Match>
+  <Match>
+    <Bug pattern="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE"/>
+    <Class name="ch.basler.kl.bld.session.AuftragFreigebenBean"/>
+  </Match>
+  <Match>
+    <Bug pattern="MS_EXPOSE_REP"/>
+    <Class name="ch.basler.newbld.gui.client.NewBLDLanguages"/>
+  </Match>
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP"/>
+    <Class name="ch.basler.newbld.server.dofactory.DOFactoryLohnlisteDO"/>
+  </Match>
+  <Match>
+    <Bug pattern="DE_MIGHT_IGNORE"/>
+    <Class name="ch.basler.newbld.server.excel.composer.ExcelComposer"/>
+  </Match>
+  <Match>
+    <Bug pattern="DLS_DEAD_LOCAL_STORE"/>
+    <Class name="ch.basler.newbld.gui.client.bos.BOScheidungsAbfindung$2"/>
+  </Match>
+  <Match>
+    <Bug pattern="DLS_DEAD_LOCAL_STORE"/>
+    <Class name="ch.basler.newbld.gui.client.ucv.diensteintritt.DiensteintrittViewUebersicht"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD"/>
+    <Class name="ch.basler.newbld.gui.client.base.AbstractNewBLDController"/>
+  </Match>
+  <Match>
+    <Bug pattern="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD"/>
+    <Class name="ch.basler.newbld.server.excel.reader.AbstractExcelParserBase"/>
+  </Match>
+  <Match>
+    <Bug pattern="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD"/>
+    <Class name="ch.basler.newbld.gui.client.ucv.jahresloehne.JahresloehneExcelController"/>
+  </Match>
+  <Match>
+    <Bug pattern="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD"/>
+    <Class name="ch.basler.newbld.gui.client.NewBLDAppController"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="MS_SHOULD_BE_FINAL"/>
+    <Class name="ch.basler.kl.bld.allgemein.texte.GuiAuswahl.sListLookup"/>
+  </Match>
+
+  <Match>
+    <Bug pattern=" RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE"/>
+    <Class name="ch.basler.kl.bld.session.NewBLDAccessBean"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING"/>
+    <Class name="ch.basler.kl.bld.persistence.AuftragLookupDAO"/>
+  </Match>
+  <Match>
+    <Bug pattern="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING"/>
+    <Class name="ch.basler.kl.bld.persistence.VertragLookupDAO_B2B"/>
+  </Match>
+  <Match>
+    <Bug pattern="SQL_PREPARED_STATEMENT_GENERATED_FROM_NONCONSTANT_STRING"/>
+    <Class name="ch.basler.kl.bld.persistence.AuftragDAO_B2B"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="HE_EQUALS_NO_HASHCODE"/>
+    <Class name="ch.basler.kl.bld.allgemein.dataobjects.AdresseDO"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="EQ_DOESNT_OVERRIDE_EQUALS"/>
+    <Class name="ch.basler.kl.bld.allgemein.dataobjects.UserDO"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="DM_NUMBER_CTOR"/>
+    <Class name="ch.basler.kl.bld.allgemein.texte.GuiAuswahl"/>
+  </Match>
+  <Match>
+    <Bug pattern="MS_SHOULD_BE_FINAL"/>
+    <Class name="ch.basler.kl.bld.allgemein.texte.GuiAuswahl"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="DM_NUMBER_CTOR"/>
+    <Class name="ch.basler.kl.bld.allgemein.texte.Texte"/>
+  </Match>
+  <Match>
+    <Bug pattern="OS_OPEN_STREAM"/>
+    <Class name="ch.basler.kl.bld.allgemein.texte.Texte"/>
+  </Match>
+  
+  <Match>
+    <Bug pattern="J2EE_STORE_OF_NON_SERIALIZABLE_OBJECT_INTO_SESSION"/>
+    <Class name="ch.basler.newbld.server.NewBLDServerMgr"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="MS_PKGPROTECT"/>
+    <Class name="ch.basler.newbld.server.excel.reader.AbstractExcelParserBase"/>
+  </Match>
+  <Match>
+    <Bug pattern="MS_PKGPROTECT"/>
+    <Class name="ch.basler.newbld.gui.client.base.AbstractNewBLDController"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="SS_SHOULD_BE_STATIC"/>
+    <Class name="ch.basler.newbld.server.excel.reader.validation.VertragHasAllPolicenValidator"/>
+  </Match>
+  <Match>
+    <Bug pattern="SS_SHOULD_BE_STATIC"/>
+    <Class name="ch.basler.newbld.server.excel.reader.validation.VertragNumbersMatchValidator"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="NP_NULL_PARAM_DEREF"/>
+    <Class name="ch.basler.newbld.server.excel.writer.JahreslohnExcelWriter"/>
+  </Match>
+
+  <Match>
+    <Bug pattern="MS_EXPOSE_REP"/>
+    <Class name="ch.basler.newbld.gui.client.NewBLDLanguages"/>
+  </Match>
+
+</FindBugsFilter>

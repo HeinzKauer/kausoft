@@ -32,3 +32,6 @@ in Eclipse maven Import
 161227-1100 
 See auch in https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 mvn archetype:generate -DgroupId=ch.kausoft.attribut -DartifactId=Attribute -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=ch.kausoft.pojo -DartifactId=Pojo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=ch.kausoft.wbg.daten -DartifactId=WBGdaten -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
