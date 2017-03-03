@@ -35,3 +35,6 @@ mvn archetype:generate -DgroupId=ch.kausoft.attribut -DartifactId=Attribute -Dar
 mvn archetype:generate -DgroupId=ch.kausoft.pojo -DartifactId=Pojo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 mvn archetype:generate -DgroupId=ch.kausoft.wbg.daten -DartifactId=WBGdaten -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 
+
+mvn archetype:generate -DgroupId=ch.kausoft.test -DartifactId=myWebAppGen -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
