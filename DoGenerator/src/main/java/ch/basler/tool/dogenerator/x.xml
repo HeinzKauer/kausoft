@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ME>
+	<E>
+		<F ID="ARM_STATUS" T="#I">
+			<V>0</V>
+		</F>
+		<F ID="Cache_modhdle" T="#S">
+			<V>0</V>
+		</F>
+		<F ID="ViewLocation" T="#ST">
+			<V />
+		</F>
+		<F ID="CSTR_CDATA_END" T="#ST">
+			<V>]]&gt;</V>
+		</F>
+		<F ID="UserId" T="#ST">
+			<V>B026670</V>
+		</F>
+		<F ID="Mandant" T="#S">
+			<V>1</V>
+		</F>
+		<F ID="MLD" T="#I">
+			<V>0</V>
+		</F>
+		<F ID="ClientVersion" T="#ST">
+			<V>NONE</V>
+		</F>
+		<F ID="SESSION_IID" T="#L">
+			<V>0</V>
+		</F>
+		<F ID="CdClientAppl" T="#S">
+			<V>2</V>
+		</F>
+		<F ID="FaultContext" T="#S">
+			<V>3</V>
+		</F>
+		<F ID="CdProfil" T="#S">
+			<V>1</V>
+		</F>
+		<F ID="Logging" T="#S">
+			<V>1</V>
+		</F>
+		<F ID="WarningCounter" T="#I">
+			<V>0</V>
+		</F>
+		<F ID="VTLogging" T="#S">
+			<V>1</V>
+		</F>
+		<F ID="MODUS" T="#S">
+			<V>0</V>
+		</F>
+		<F ID="NrKompilat" T="#S">
+			<V>0</V>
+		</F>
+		<F ID="MappingMandant" T="#S">
+			<V>1</V>
+		</F>
+		<F ID="Sprachcode" T="#S">
+			<V>1</V>
+		</F>
+		<F ID="CSTR_CDATA_START" T="#ST">
+			<V>&lt;![CDATA[</V>
+		</F>
+		<F ID="Version" T="#ST">
+			<V>3.2.7.51</V>
+		</F>
+		<F ID="SESSION_CID" T="#L">
+			<V>6</V>
+		</F>
+	</E>
+	<SOURCE CLASSID="50244" INSTANCEID="0" />
+	<TARGET CLASSID="50244" INSTANCEID="0" />
+	<Q ID="getPolice">
+		<B ID="VL_X_PoliceRead">
+			<F ID="IdGeschaeft" T="#ST">
+				<V>0511068561</V>
+			</F>
+			<F ID="Datum" T="#DATE">
+				<V>9999-12-31</V>
+			</F>
+			<F ID="CdErmtlSrvcDat" SIZE="#S" T="#I">
+				<V>0</V>
+			</F>
+		</B>
+	</Q>
+</ME>

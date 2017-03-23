@@ -1,0 +1,149 @@
+//
+//
+//
+//
+////mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+//
+// 
+// 
+
+// 
+// classNameDO = sheet.Cells(ROW_CLASS_NAME, COL_CLASS_VALUE)
+// dirDOs = getDirectory(workspace, project, packageDOs)
+// fileNameDO = dirDOs + "\" + classNameDO + ".java"
+// 
+// Set file = CreateObject("Scripting.FileSystemObject")
+//
+// ' save file under .javaold
+// 'If Not dir(fileNameDO) = "" Then
+// '    file.copyfile fileNameDO, fileNameDO + "old", True
+// 'End If
+// 
+// ' --------------------------------------------------
+// ' file already exists -> copy it under .javax and then delete it
+// 
+// isFileExists = False
+// If Not dir(fileNameDO) = "" Then
+//     isFileExists = True
+//     file.copyfile fileNameDO, fileNameDO + "x", True
+//     Kill fileNameDO
+// End If
+//
+// ' --------------------------------------------------
+// 
+// Set DOCreator = New CreatorDOClass
+// Open fileNameDO For Output As #1
+// 
+// ' file already exists ->
+// If isFileExists Then
+//     
+//     Open fileNameDO + "x" For Input As #2
+// 
+//     isSection = False
+//     isImport = False
+//     imps = 0
+//     Do While Not EOF(2)
+//     
+//         ' read record
+//         Line Input #2, rec
+//         
+//         ' -------------------------------------
+//         ' IMPORTS:
+//         
+//         section = Mid(rec, 1, 6)
+//         
+//         ' collect imports
+//         If section = "import" Then
+//             isImport = True
+//             If Not rec = "" Then
+//                 imps = imps + 1
+//                 imports(imps) = rec
+//             End If
+//         End If
+//
+//         ' generate imports and write them to output file
+//         pos1 = InStr(rec, "//@@Begin-2")
+//         pos2 = InStr(rec, "// @@Begin-2")
+//         If pos1 > 0 Or pos2 > 0 Then
+//             isImport = False
+//             Print #1, DOCreator.createCode( _
+//                 wbook, "import", sheet, classNameDO, packageDOs, classNameMgr, packageMgr, packageInts, imports)
+//         End If
+//                     
+//         ' -------------------------------------
+//         ' GENERATED CODE:
+//         
+//         ' begin of section -> generate whole section and write it to output file
+//         
+//         pos1 = InStr(rec, "//@@Begin-")
+//         pos2 = InStr(rec, "// @@Begin-")
+//         If pos1 > 0 Or pos2 > 0 Then
+//             If pos1 > 0 Then
+//                 pos = pos1 + 10
+//             End If
+//             If pos2 > 0 Then
+//                 pos = pos2 + 11
+//             End If
+//             isSection = True
+//             section = Mid(rec, pos, 1)
+//             Print #1, DOCreator.createCode( _
+//                 wbook, section, sheet, classNameDO, packageDOs, classNameMgr, packageMgr, packageInts, imports)
+//         End If
+//         
+//         ' -------------------------------------
+//         ' INDIVIDUAL CODE:
+//         
+//         ' record outside of section and import -> write it to output file
+//         
+//         If Not isSection And Not isImport Then
+//             Print #1, rec
+//         End If
+//         
+//         ' -------------------------------------
+//         ' end of section -> clear flag
+//         
+//         pos1 = InStr(rec, "//@@End-")
+//         pos2 = InStr(rec, "// @@End-")
+//         If pos1 > 0 Or pos2 > 0 Then
+//             isSection = False
+//         End If
+//         
+//     Loop
+// 
+// ' file doesn't exist -> generate whole file in one part
+// Else
+//     Print #1, DOCreator.createCode( _
+//         wbook, 0, sheet, classNameDO, packageDOs, classNameMgr, packageMgr, packageInts, imports)
+// End If
+// 
+// Close #1
+// 
+// ' file already exists -> close and delete .javax
+// If isFileExists Then
+//     Close #2
+//     Kill fileNameDO + "x"
+// End If
+//
+//End Sub
+//
+//Function getDirectory(workspace As String, project As String, package As String) As String
+// 
+// Dim dir As String
+// 
+// dir = Replace(package, ".", "\")
+// getDirectory = workspace + "\" + project + "\src\main\java\" + dir
+// 
+//End Function
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//	
