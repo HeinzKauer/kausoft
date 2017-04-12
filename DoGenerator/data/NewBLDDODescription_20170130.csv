@@ -1,0 +1,75 @@
+Meta Info for DO (DescrType);;;;;Code Generation;;;;;;;;;;;;
+Class Name;DODiensteintritt;;;;Auftrag: Diensteintritt;;;;;;;;;;;;
+Base class Name;DOAuftrag;;;;Database table: TB15_BLDDE;;;;;;;;;;;;
+Base class Import;;;;;;;;;;;;;;;;;
+Hierarchy Level;;;;;;;;;;;;;;;;;
+UID;2593040872547771871L;;;;;;;;;;;;;;;;
+BO;BODiensteintritt;;;;;;;;;;;;;;;;
+Interface;;;;;;;;;;;;;;;;;
+KeyCreationType;KeyOnPersist;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+Meta Info for DO-Attributes (DescrAttr);;;;;;;;;;;;;;;Code Generation;;
+Attribute;;Format;;;Flags;;;;Description;;;Value;;;;;
+Name;Key;Type;Length;Precision;Mandatory;Readonly;Info;Transient;Description;ML Key;PrintTag;Init;Init EForm;Code;NoField;NoGetSet;Comment
+AHVNr1;;String;14;;;;;;AHV-Nr.;LBL_AHV_Nummer;;;;;;;
+AHVNr1Neu;;String;12;;;;;;AHV-Nr.;LBL_AHV_Nummer_Neu;;;;;;;neue AHV-Nr 1
+AHVNr2;;String;14;;;;;;AHV-Nr.;LBL_AHV_Nummer;;;;;;;
+AHVNr2Neu;;String;4;;;;;;AHV-Nr.;LBL_AHV_Nummer_Neu;;;;;;;neue AHV-Nr 2
+AHVNr3;;String;14;;;;;;AHV-Nr.;LBL_AHV_Nummer;;;;;;;
+AHVNr3Neu;;String;4;;;;;;AHV-Nr.;LBL_AHV_Nummer_Neu;;;;;;;neue AHV-Nr 3
+AHVNr4;;String;14;;;;;;AHV-Nr.;LBL_AHV_Nummer;;;;;;;
+AHVNr4Neu;;String;2;;;;;;AHV-Nr.;LBL_AHV_Nummer_Neu;;;;;;;neue AHV-Nr 4
+AHVNrNeu;;String;16;;;true;;true;AHV-Nummer;LBL_AHV_Nummer_Neu;neuahvnr;;;;true;true;neue AHV-Nr gesamt
+Personalnummer;;String;20;;;;;;Personalnummer;LBL_Personalnummer;vppersnr;;;;;;Personalnummer der Versicherten Personen des Versicherungsnehmers.
+Arbeitsfaehig;;short;;;true;;;;Arbeitsfaehigkeit;LBL_Ist_die_Person;aktarbf;;2;-243;;;2=Ja, 1=Nein
+ArbeitsfaehigGrund;;String;100;;;;;;Bemerkung;LBL_Falls_nein_Grund;eugrund;;;;;;
+Austrittleistung;;short;;;true;;http://www.baloise.ch/$$/application-content/businesslifedirect/austrittsleistung;;Ist eine Austrittsleistung aus einem frueheren Arbeitsverhaeltnis zu erwarten?;LBL_Austrittsleistung;swleisag;;2;243;;;1=Ja, 2=Nein, 3=Unbekannt
+Beschgrad;;float;5;2;;;;;Beschaeftigungsgrad;LBL_Beschaeftigungsgrad;aktbgrad;;100;;;;
+BeziehtLeistungen;;short;;;true;;;;Bezieht sie Leistungen der Invalidenversicherung (IV), Militaerversicherung (MV) oder der Unfallversicherung (UVG) und/oder aus einer Personalvorsorge-Einrichtung oder sind Ansprueche haengig?;LBL_Bezieht_sie_Leistungen;swleistv;;1;-243;;;2=Ja, 1=Nein
+Dedatum;;Date;10;;true;;http://www.baloise.ch/$$/application-content/businesslifedirect/diensteintritt;;Diensteintritt;LBL_Diensteintrittsdatum;eintdt;;;;;;
+Dokumentsprache;;short;;;true;;;;Sprache fuer Versicherungsdokumente;LBL_Sprache_Versicherungsdokumente;vpsprac;;;252;;;1=deutsch, 2=franzoesisch, 3=italienisch, 4=englisch
+Firmenname;;String;35;;;;;;;;;;;;;;
+Geburtsdatum;;Date;10;;true;;;;Geburtsdatum;LBL_Geburtsdatum;vpgebdat;;;;;;
+Geschlecht;;short;;;true;;;;Geschlecht;LBL_Geschlecht;vpgeschl;;;196;;;1= maennlich, 2=weiblich
+Heiratsdatum;;Date;10;;;;;;Datum der Eheschliessung;LBL_Datum_Eheschliessung;vpehedt;;;;;;
+Jahreslohn;;double;13;2;true;;http://www.baloise.ch/$$/application-content/businesslifedirect/jahreslohn;;Jahreslohn;LBL_Zu_meldender_Jahreslohn;aktjlohn;;;;;;
+Kategorie;;int;;;true;;http://www.baloise.ch/$$/application-content/businesslifedirect/kategorie;;Personenkategorie;LBL_Personenkategorie;aktkateg;;;;;;
+Organisationseinheit;;int;;;true;;;;Organisationseinheit;LBL_Organisationseinheit;aktoe;;;;;;
+Ort;;String;30;;;;;;Ort;LBL_Ort;vport;;;;;;
+Stellung;;short;;;true;;;;Stellung in der Firma;LBL_Stellung_Firma;stellung;;1;144;;;1=Arbeitnehmer, 2=Arbeitgeber
+Unterstuetzungspflicht;;short;;;;;http://www.baloise.ch/$$/application-content/businesslifedirect/unterstuetzungspflicht;;Unterstuetzungspflicht;LBL_Unterstuetzungspflicht;aktupfli;;3;1030;;;1=Ja, 2=Nein, 3=Unbekannt
+Versbeginndatum;;Date;10;;;;;;Versicherungsbeginn;LBL_Versicherungsbeginn;versbdt;;;;;;
+VersNr;;String;15;;;;;;Vers.-Nr.;LBL_VersNr;vppono;;;;;;Versicherungsnummer
+Zivilstand;;short;;;true;;;;Zivilstand;LBL_Zivilstand;vpzivils;;;189;;;1 = ledig ,2 = verheiratet ,3 = geschieden ,4 = verwitwet ,5 = in eingetragener Partnerschaft ,6 = aufgelöste Partnerschaft ,7 = getrennt
+Adr_Adresszusatz;;String;35;;;;;;Adresszusatz;LBL_Adresszusatz;vpzusadr;;;;;;
+Adr_Hausnummer;;String;8;;;;;;Hausnummer;;;;;;;;
+Adr_Landcode;;short;;;true;;;;Land;LBL_Land;vpintkfz;;19;1;;;
+Adr_Ort;;String;40;;true;;;;Ort;LBL_Wohnort;vport;;;;;;
+Adr_Plz;;String;6;;true;;;;Plz;LBL_PLZ;vpplz;;;;;;
+Adr_Postfach;;String;10;;;;;;Postfach;LBL_Postfach;vpzusstr;;;;;;
+Adr_Strasse;;String;35;;true;;;;Strasse;LBL_Strasse;;;;;;;
+Adr_StrasseNr;;String;;;;true;;true;Strasse, Nr.;LBL_Strasse;vpstrass;;;;true;true;Strasse + Hausnummer
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
