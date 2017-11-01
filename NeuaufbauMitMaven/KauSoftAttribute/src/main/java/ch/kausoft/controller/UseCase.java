@@ -11,9 +11,9 @@
 ///**
 // * Ein UseCase ist gleich wie ein Anwendungsfall.
 // * 
-// * Ein UseCase wird immer an einen Context gehängt. Sollen von
+// * Ein UseCase wird immer an einen Context gehï¿½ngt. Sollen von
 // * derselben Klasse mehrer UseCases mit unterschiedlichen
-// * Identifikationen gespeichert werden, können diese mit einer
+// * Identifikationen gespeichert werden, kï¿½nnen diese mit einer
 // * UseCase-ID unterschieden werden.
 // * 
 // * @author Heinz
@@ -60,9 +60,9 @@ import ch.kausoft.context.SessionContext;
 /**
  * Ein UseCase ist gleich wie ein Anwendungsfall.
  * 
- * Ein UseCase wird immer an einen Context gehängt. Sollen von
+ * Ein UseCase wird immer an einen Context gehÃ¤ngt. Sollen von
  * derselben Klasse mehrer UseCases mit unterschiedlichen
- * Identifikationen gespeichert werden, können diese mit einer
+ * Identifikationen gespeichert werden, kÃ¶nnen diese mit einer
  * UseCase-ID unterschieden werden.
  * 
  * @author Heinz
@@ -89,7 +89,7 @@ public abstract class UseCase {
 	}
 	
 	/**
-	 * Der UC wirs in den Context gehängt.
+	 * Der UC wirs in den Context gehï¿½ngt.
 	 * @param pUseCase_ID
 	 */
 	protected UseCase(Context context, String pUseCase_ID) {

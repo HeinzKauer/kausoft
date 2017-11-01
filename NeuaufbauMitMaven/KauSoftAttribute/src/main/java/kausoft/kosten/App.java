@@ -9,48 +9,53 @@ import ch.kausoft.wbg.daten.DataIOExcel;
 import ch.kausoft.wbg.daten.OutputExcel;
 import ch.kausoft.wbg.daten.bo.InvestitionBO;
 import ch.kausoft.wbg.daten.bo.WohnungBO;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 
 /**
  * Hello world! 14
- * 
  */
 public class App {
-	public static void main(String[] args) {
-		System.out.println("Hello World!");
+    public static void main(String[] args) {
+        final String PATH = "";
 
-		// UseCase DatenPath
+        System.out.println("Hello World!");
 
-		DataPathUC dataPath = new DataPathUC("4711");
-		SessionContext.getContext().add(dataPath);
+        // UseCase DatenPath
 
-		System.out.println(dataPath.getDataPath());
-		dataPath
-				.setDataPath("C:\\Data\\intellijWS\\kausoft2\\kausoft2\\Java09_Kostenmiete\\daten\\InputDaten.csv");
-		System.out.println(dataPath.getDataPath());
-		System.out.println(dataPath.getDataPath());
+        DataPathUC dataPath = new DataPathUC("4711");
+        SessionContext.getContext().add(dataPath);
 
-		// UseCase DatenSpeicher laden
-		DatenSpeicherUC datenSpeicher = DatenSpeicherUC.getInstance();
-		// daten.loadCSV(dataPath.getDataPath());
+        System.out.println(dataPath.getDataPath());
+        dataPath.setDataPath("C:\\Data\\intellijWS\\kausoft2\\kausoft2\\Java09_Kostenmiete\\daten\\InputDaten.csv");
 
-		// UseCase DatenSpeicher laden
-		dataPath
-				.setDataPath("C:\\Development\\gitHub\\kausoftFromGithub\\Daten\\");
-		System.out.println(dataPath.getDataPath());
-		datenSpeicher.loadFromExcel(dataPath.getDataPath());
+        dataPath.setDataPath("/home/heinz/IdeaProjects/kausoft/Daten/InputDaten.csv");
 
-		// UseCase Tilgungsplane Rechnen
-		TilgungsplanRechnenUC tpr = TilgungsplanRechnenUC.getInstance();
-		tpr.calculate(DatenSpeicher.getDatenSpeicher());
 
-		// UseCase DatenSpeicher laden
-		OutputExcel excel = DataIOExcel.getOutPutExcel(dataPath
-				.getDataPath());
-		InvestitionBO.fillSheet(excel.getInvestitionenSheet());		
-		WohnungBO.fillSheet(excel.getWohnungenSheet());
-		datenSpeicher.save(excel);
+        System.out.println(dataPath.getDataPath());
+        System.out.println(dataPath.getDataPath());
 
-		datenSpeicher.saveToExcel(dataPath.getDataPath());
+        // UseCase DatenSpeicher laden
+        DatenSpeicherUC datenSpeicher = DatenSpeicherUC.getInstance();
+        // daten.loadCSV(dataPath.getDataPath());
 
-	}
+        // UseCase DatenSpeicher laden
+        dataPath.setDataPath("C:\\Development\\gitHub\\kausoftFromGithub\\Daten\\");
+        dataPath.setDataPath("/home/heinz/IdeaProjects/kausoft/Daten/");
+        System.out.println(dataPath.getDataPath());
+        datenSpeicher.loadFromExcel(dataPath.getDataPath());
+
+        // UseCase Tilgungsplane Rechnen
+        TilgungsplanRechnenUC tpr = TilgungsplanRechnenUC.getInstance();
+        tpr.calculate(DatenSpeicher.getDatenSpeicher());
+
+        // UseCase DatenSpeicher laden
+        OutputExcel excel = DataIOExcel.getOutPutExcel(dataPath
+                .getDataPath());
+        InvestitionBO.fillSheet(excel.getInvestitionenSheet());
+        WohnungBO.fillSheet(excel.getWohnungenSheet());
+        datenSpeicher.save(excel);
+
+        datenSpeicher.saveToExcel(dataPath.getDataPath());
+
+    }
 }
