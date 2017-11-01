@@ -11,7 +11,7 @@ import lombok.Setter;
 import ch.kausoft.controller.UseCase;
 
 /**
- * In einem Context werden die UseCases regristriert. Ein UseCase hatt
+ * In einem Context werden die UseCases regristriert. Ein UseCase hat
  * immer genau einen Context, kann jedoch in mehreren Contexten
  * gespeichert sein.
  * <br>

@@ -33,9 +33,10 @@ public class Kostenmiete {
 
 		DataPathUC dataPath = new DataPathUC("4711");
 		SessionContext.getContext().add(dataPath);
-		
-		
-		dataPath.setDataPath("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\InputDaten.csv");
+
+
+//		dataPath.setDataPath("C:\\Data\\intellijWS\\kausoft2\\kausoft2\\Java09_Kostenmiete\\daten\\InputDaten.csv");
+		dataPath.setDataPath("C:\\Data\\intellijWS\\kausoft2\\kausoft2\\Java09_Kostenmiete\\daten\\");
 		System.out.println(dataPath.getDataPath());
 
 		// UseCase DatenSpeicher laden

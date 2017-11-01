@@ -109,7 +109,10 @@ public class DataIOExcel {
 	}
 
 	public void read() {
-		read("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\");
+//		read("C:\\eclipse2013\\Workspaces\\kausoft\\Java09_Kostenmiete\\daten\\");
+		read("C:\\Data\\intellijWS\\kausoft2\\kausoft2\\Java09_Kostenmiete\\daten\\");
+
+
 	}
 
 	public void read(String path) {

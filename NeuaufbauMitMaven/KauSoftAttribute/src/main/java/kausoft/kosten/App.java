@@ -25,7 +25,7 @@ public class App {
 
 		System.out.println(dataPath.getDataPath());
 		dataPath
-				.setDataPath("C:\\Development\\gitHub\\kausoftFromGithub\\Daten\\InputDaten.csv");
+				.setDataPath("C:\\Data\\intellijWS\\kausoft2\\kausoft2\\Java09_Kostenmiete\\daten\\InputDaten.csv");
 		System.out.println(dataPath.getDataPath());
 		System.out.println(dataPath.getDataPath());
 
