@@ -2,7 +2,7 @@ Eclipse Projektaufbau
 
 
 
-Die Tests werden im Tomcat Testserver durchgeführt. 
+Die Tests werden im Tomcat Testserver durchgefÃ¼hrt.
 
 
 
