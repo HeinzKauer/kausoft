@@ -4,3 +4,5 @@ auf dem aus Git ausgecheckten repo gemacht habe
 Auf Guthub geänder.
 Und zum zweiten gheändert.
 geändert im Ubuntu
+
+3.11.2017
