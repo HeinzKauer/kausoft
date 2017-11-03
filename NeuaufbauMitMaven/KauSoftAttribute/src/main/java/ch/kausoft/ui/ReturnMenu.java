@@ -17,7 +17,6 @@ public class ReturnMenu implements IMenueAction {
 	 * 
 	 * @see ch.kausoft.scui.Call#run()
 	 */
-	@Override
 	public boolean runMenueAction() {
 		return true;
 	}

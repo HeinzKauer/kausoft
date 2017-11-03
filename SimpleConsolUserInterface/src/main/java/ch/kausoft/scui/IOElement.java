@@ -12,12 +12,12 @@ public class IOElement {
 
 	/**
 	 * Mit der Action-ID kann dann via Console eine Aktion die im Call
-	 * gespeichert ist, ausgeführt wern. 
+	 * gespeichert ist, ausgefÃ¼hrt wern. 
 	 */
 	String actionID;
 
 	/**
-	 * Ein erklärender Text zur Action-ID 
+	 * Ein erklÃ¼render Text zur Action-ID 
 	 */
 	String hilfe;
 

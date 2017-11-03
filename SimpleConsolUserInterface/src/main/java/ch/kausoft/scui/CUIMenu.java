@@ -7,7 +7,7 @@ import java.util.Vector;
  * Console user interface Menu.
  * 
  * Ein CUIMenu besteht aus einer Menge von Iinput Output Elementen
- * Dem CUIMenu könne IOElement hinzugefügt werden
+ * Dem CUIMenu kÃ¼nne IOElement hinzugefÃ¼gt werden
  * 
  * @author Heinz kauer
  */
@@ -16,7 +16,7 @@ public class CUIMenu {
 	private Vector<IOElement> menu = new Vector<IOElement>();
 
 	/**
-	 * Dem CUIMenu könne IOElement hinzugefügt werden
+	 * Dem CUIMenu kÃ¼nne IOElement hinzugefÃ¼gt werden
 	 * 
 	 * @since created at 16.01.2015.23:20:09
 	 * @param ioElement
@@ -27,7 +27,7 @@ public class CUIMenu {
 	}
 
 	/**
-	 * liefert alle Menue Elemente zurück
+	 * liefert alle Menue Elemente zurÃ¼ck
 	 * 
 	 * @since created at 16.01.2015.23:23:44
 	 * @return IOElement []

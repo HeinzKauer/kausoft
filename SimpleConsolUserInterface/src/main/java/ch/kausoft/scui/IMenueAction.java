@@ -9,7 +9,7 @@ public interface IMenueAction {
 	
 	/**
 	 * 
-	 * @return true Aufgabe erledigt und zurück zu Vor-Menue; 
+	 * @return true Aufgabe erledigt und zurÃ¼ck zu Vor-Menue; 
 	 *         false Aufgabe nicht erledigt erneut Menue ausgeben.
 	 */
 	 public boolean runMenueAction();
