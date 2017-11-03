@@ -26,7 +26,7 @@ public class Daten extends RecordID {
 			StringBuffer sb = new StringBuffer();
 			sb.append("\n  ");
 			for (int i = 0; i < fields.length; i++) {
-				// Zugriffsberechtigung für none private Methoden geben
+				// Zugriffsberechtigung fÃ¤r none private Methoden geben
 				fields[i].setAccessible(true);
 				Object obj = (Object) fields[i].get(this);
 				// sb.append(obj.getClass().getName());

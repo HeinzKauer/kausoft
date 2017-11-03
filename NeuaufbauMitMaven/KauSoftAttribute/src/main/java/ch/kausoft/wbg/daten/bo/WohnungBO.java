@@ -1,22 +1,14 @@
 package ch.kausoft.wbg.daten.bo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-
+import ch.kausoft.basic.DatenSpeicher;
+import ch.kausoft.kostenmiete.*;
+import ch.kausoft.kostenmiete.Tilgung.TilgungStrategie;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 
-import ch.kausoft.basic.DatenSpeicher;
-import ch.kausoft.kostenmiete.Investition;
-import ch.kausoft.kostenmiete.Liegenschaft;
-import ch.kausoft.kostenmiete.Siedlung;
-import ch.kausoft.kostenmiete.Tilgung;
-import ch.kausoft.kostenmiete.Tilgung.TilgungStrategie;
-import ch.kausoft.kostenmiete.TilgungWert;
-import ch.kausoft.kostenmiete.Wohnung;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class WohnungBO {
 
@@ -149,7 +141,7 @@ public class WohnungBO {
 		int colCount = 1;
 		rowBez.createCell(colCount).setCellValue("Wohnungsbezeichnung");
 		rowBesch.createCell(colCount).setCellValue("Beschreibung / Name");
-		rowFlaeche.createCell(colCount).setCellValue("Fläche der Wohnung");
+		rowFlaeche.createCell(colCount).setCellValue("Flï¿½che der Wohnung");
 		rowBewert.createCell(colCount).setCellValue("Bewertung der Wohnung");
 		rowHausnummer.createCell(colCount).setCellValue("Hausnummer");
 		rowNummer.createCell(colCount).setCellValue("Wohnungsnummer");

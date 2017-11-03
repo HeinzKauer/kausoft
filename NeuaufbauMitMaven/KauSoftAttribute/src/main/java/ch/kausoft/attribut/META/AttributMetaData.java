@@ -11,7 +11,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * AttributMetaData hält alle Beschreibungsdaten über die Attribute.<br>
+ * AttributMetaData hï¿½lt alle Beschreibungsdaten ï¿½ber die Attribute.<br>
  * <br>
  * Beschreibungsdaten sind Informationen die ein Attribut als Typ
  * beschreiben. <br>
@@ -64,19 +64,19 @@ public class AttributMetaData {
      * 
      * @param key
      * @return ResourceBundle
-     * @see java.util.Hashtable#get(java.lang.Object)
+     * @see Hashtable#get(Object)
      */
     public synchronized ResourceBundle get(String key) {
       return messages.get(key);
     }
-    
+
     /**
      * (non-Javadoc)
-     * 
+     *
      * @param arg0
      * @param arg1
      * @return ResourceBundle
-     * @see java.util.Hashtable#put(java.lang.Object, java.lang.Object)
+     * @see Hashtable#put(Object, Object)
      */
     public synchronized ResourceBundle put(String arg0,
         ResourceBundle arg1) {
@@ -86,13 +86,13 @@ public class AttributMetaData {
   
   /**
    * Singelton implementierung<br>
-   * Die MataDaten müssen nur einmal im System vorhanden sein.
+   * Die MataDaten mï¿½ssen nur einmal im System vorhanden sein.
    */
   private static AttributMetaData metaData = null;
   
   /**
-   * Diese Methode gibt abhängig von den Parametern die Anforderung-ID
-   * zurück.
+   * Diese Methode gibt abhï¿½ngig von den Parametern die Anforderung-ID
+   * zurï¿½ck.
    * 
    * @param bundleName
    *          "ch.kausoft.attribut.person.messages"
@@ -122,10 +122,10 @@ public class AttributMetaData {
   }
   
   /**
-   * Diese Methode gibt abhängig von den Parametern den Attribut-Label
-   * Text zurück. Je nach Sprache_code in der entsprechenden Sprache.
+   * Diese Methode gibt abhï¿½ngig von den Parametern den Attribut-Label
+   * Text zurï¿½ck. Je nach Sprache_code in der entsprechenden Sprache.
    * Ist der Sprach_code = ? wird der technische Name =-> die attributID
-   * zusammen mit der Anforderungs-Id zurück gegeben.
+   * zusammen mit der Anforderungs-Id zurï¿½ck gegeben.
    * 
    * @param bundleName
    *          "ch.kausoft.attribut.person.messages"
@@ -164,11 +164,11 @@ public class AttributMetaData {
   
   /**
    * Singelton implementierung von AttributMetaData<br>
-   * Es genügt wenn die AttributMetaData pro Applikation nur einmal
+   * Es genï¿½gt wenn die AttributMetaData pro Applikation nur einmal
    * vorhanden sind. Dieses Singelton ist nicht gesichert. Das heist es
-   * gibt keine Referenzen die dafür sorgen dass dieses Singelton vom
-   * Garbage Collector nicht etwa gelöscht würde. Dies schadet
-   * allerdings nicht, weil es nur transiente Daten enthält.
+   * gibt keine Referenzen die dafï¿½r sorgen dass dieses Singelton vom
+   * Garbage Collector nicht etwa gelï¿½scht wï¿½rde. Dies schadet
+   * allerdings nicht, weil es nur transiente Daten enthï¿½lt.
    * 
    * @since created at 14.06.2008.22:46:05
    * @return AttributMetaData
@@ -184,7 +184,7 @@ public class AttributMetaData {
   }
   
   /**
-   * Der vorhanden Buffer wird gelöscht, das führt dazu dass bei Bedarf
+   * Der vorhanden Buffer wird gelï¿½scht, das fï¿½hrt dazu dass bei Bedarf
    * die message.properties neu geladen werden.
    */
   public void reload() {

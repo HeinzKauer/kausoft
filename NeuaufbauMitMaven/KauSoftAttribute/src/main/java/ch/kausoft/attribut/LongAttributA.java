@@ -22,7 +22,7 @@ public abstract class LongAttributA extends AttributA {
   }
   
   /**
-   * @see ch.kausoft.attribut.AttributA#setString(java.lang.String)
+   * @see ch.kausoft.attribut.AttributA#setString(String)
    */
   public final void setString(String value) {
     setLong(Long.parseLong(value));

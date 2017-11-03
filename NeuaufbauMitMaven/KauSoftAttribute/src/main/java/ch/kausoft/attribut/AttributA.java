@@ -10,7 +10,7 @@ import ch.kausoft.attribut.META.AttributMetaData;
 /**
  * Jedes Daten Attribut leitet von diesem Attribut ab. In dieser Klasse
  * werden fundametale Anforderungen umgesetzt. So zum Beispiel die
- * Sprachsteuerung für die Repräsentation. <BR>
+ * Sprachsteuerung fÃ¼r die ReprÃ¼sentation. <BR>
  * <BR>
  * <b>Wiki:</b><br>
  * <A HREF="http://notizbuch2014.heinzkauer.ch/mediawiki/index.php?search=Attribut" >Attribut
@@ -25,7 +25,7 @@ import ch.kausoft.attribut.META.AttributMetaData;
 public abstract class AttributA extends KauSoft {
   
   /**
-   * Hier muss die Attribut ID zurück gegeben werden. Diese ID bezieht
+   * Hier muss die Attribut ID zurÃ¼ck gegeben werden. Diese ID bezieht
    * sich auf das eigentliche Attribut und wird verwendet um aus dem
    * messages.propperties Texte aus zu lesen. Ein messages.propperties
    * Eintrag kann folgendermassen aussehen.
@@ -39,10 +39,10 @@ public abstract class AttributA extends KauSoft {
   public abstract String getAttributID();
   
   /**
-   * Für jedes Package gibt es ein messages.propperties file. Wird im
+   * FÃ¼r jedes Package gibt es ein messages.propperties file. Wird im
    * Package ch.kausoft.attribut.person ein Attribut Strasse deklariert
    * so soll die Methode getBundleName() den String
-   * "ch.kausoft.attribut.person.messages" zurückgeben.
+   * "ch.kausoft.attribut.person.messages" zurÃ¼ckgeben.
    * 
    * @since created at 29.07.2008.23:25:20
    * @return String z.B. "ch.kausoft.attribut.person.messages"
@@ -50,9 +50,9 @@ public abstract class AttributA extends KauSoft {
   public abstract String getBundleName();
   
   /**
-   * Jedes Attribut hat seine Berechtigung oder seine Begründung darin
+   * Jedes Attribut hat seine Berechtigung oder seine BegrÃ¼ndung darin
    * dass es einen Grund gibt durch die eine Anforderung gefordert ist.
-   * Im messages.propperties wird für jedes Attribut die
+   * Im messages.propperties wird fÃ¼r jedes Attribut die
    * Dokumentations-ID der Anforderung gespeichert. <BR>
    * <BR>
    * 
@@ -96,9 +96,9 @@ public abstract class AttributA extends KauSoft {
   }
   
   /**
-   * Hier muss die String Repräsentation vom Attribut zurück gegebenen
+   * Hier muss die String ReprÃ¼sentation vom Attribut zurÃ¼ck gegebenen
    * werden. Dabei handelt es sich vorwiegend um die String Darstellung
-   * in einem UI. Für die DB kann es unterschiedlich sein.
+   * in einem UI. FÃ¼r die DB kann es unterschiedlich sein.
    * 
    * @since created at 29.07.2008.23:16:36
    * @return String
@@ -107,7 +107,7 @@ public abstract class AttributA extends KauSoft {
   
   /**
    * Hier wird das Attribut aus einem String erstellt. Das heist der
-   * String der übergeben wird, wird so umgewandelt dass er korrekt in
+   * String der Ã¼bergeben wird, wird so umgewandelt dass er korrekt in
    * das Attribut gespeichert wird.
    * 
    * @since created at 29.07.2008.23:18:04

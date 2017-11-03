@@ -1,13 +1,11 @@
 package ch.kausoft.kostenmiete;
 
-import java.util.HashMap;
-
 import ch.kausoft.basic.DatenBB;
-import ch.kausoft.basic.DatenRecord;
 import ch.kausoft.basic.DatenSpeicher;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NonNull;
+
+import java.util.HashMap;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -24,7 +22,7 @@ public final class Wohnung extends DatenBB {
 	private short hausnummer;
 
 	/**
-	 * Wohnungsfläche
+	 * WohnungsflÃ¤che
 	 */
 	private double flaeche;
 
@@ -34,7 +32,7 @@ public final class Wohnung extends DatenBB {
 	private double bewertung;
 
 	/**
-	 * Gehört zur Liegenschaft 
+	 * GehÃ¤rt zur Liegenschaft 
 	 */
 	private Liegenschaft liegenschaft = null;
 

@@ -4,10 +4,10 @@
  */
 package ch.kausoft.kostenmiete;
 
-import java.util.HashMap;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.util.HashMap;
 
 /**
  * 
@@ -30,7 +30,7 @@ public class TilgungWert {
 
 	public void addWert(Long id, double w) {
 		if (wert.get(id) != null) {
-			throw new IllegalArgumentException("ETW01: Fehler Doppelter Wert für dieselbe Wohnung.");
+			throw new IllegalArgumentException("ETW01: Fehler Doppelter Wert fï¿½r dieselbe Wohnung.");
 		}
 		;
 		wert.put(id, w);

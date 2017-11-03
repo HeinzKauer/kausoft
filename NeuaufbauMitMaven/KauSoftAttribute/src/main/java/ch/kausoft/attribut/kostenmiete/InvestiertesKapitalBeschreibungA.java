@@ -13,7 +13,7 @@ public abstract class InvestiertesKapitalBeschreibungA extends BeschreibungA {
 
 	/**
 	 * @since created at 06.11.2007.22:57:42
-	 * @see ch.kausoft.attribut.BeschreibungA#getBundleName()
+	 * @see BeschreibungA#getBundleName()
 	 */
 	public String getBundleName() {
 		return Constant.bundleName;
@@ -21,9 +21,9 @@ public abstract class InvestiertesKapitalBeschreibungA extends BeschreibungA {
 
 	/**
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @since created at 04.01.2014.22:57:24
-	 * @see ch.kausoft.attribut.BeschreibungA#getAttributID()
+	 * @see BeschreibungA#getAttributID()
 	 */
 	public String getAttributID() {
 		return "issue.InvestiertesKapitalBeschreibung";

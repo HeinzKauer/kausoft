@@ -25,7 +25,7 @@ public abstract class DataRecordIDA extends LongAttributA {
   /**
    * Die zuletzt vergebene ID-Nummer wird festgehalten. Dies ist
    * notwendig weil innerhalb sehr kurzer Zeit mehrere ID's angefordert
-   * werden können. In der Methode
+   * werden kï¿½nnen. In der Methode
    * 
    * @see #getNextNewID()
    */
@@ -33,14 +33,14 @@ public abstract class DataRecordIDA extends LongAttributA {
   
   /**
    * @return String
-   * @see ch.kausoft.attribut.AttributA#getAttributID()
+   * @see AttributA#getAttributID()
    */
   public String getAttributID() {
-    return "DataRecordID"; // 
+    return "DataRecordID"; //
   }
-  
+
   /**
-   * @see ch.kausoft.attribut.AttributA#getBundleName()
+   * @see AttributA#getBundleName()
    * @return String
    */
   public String getBundleName() {

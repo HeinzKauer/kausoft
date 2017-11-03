@@ -3,7 +3,7 @@ package ch.kausoft.basic;
 import lombok.Data;
 
 /**
- * Dieses Jahr Monat repräsentiert einen bestimmten Monat wobei 01 = Januar ist
+ * Dieses Jahr Monat reprÃ¤sentiert einen bestimmten Monat wobei 01 = Januar ist
  * 
  * @author Heinz
  *

@@ -1,15 +1,15 @@
 package ch.kausoft.kostenmiete;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 import ch.kausoft.basic.DatenRecord;
 import ch.kausoft.basic.JahrMonat;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
- * für die Tilgung einer Investition wird ein jährlicher Mietzinsbeitrag
+ * fÃ¼r die Tilgung einer Investition wird ein jÃ¼hrlicher Mietzinsbeitrag
  * verwendet. Von diesem Beitrag werden die Zinskosten abgezogen und der Rest
  * wird zur Schuldamortisation verwendet. Dieser Mietzinsbeitrag ist der in
- * einem effektiven Mietzins der für diese Investition verwendet wird. 
+ * einem effektiven Mietzins der fÃ¼r diese Investition verwendet wird. 
  * 
  * Jeder Investition hat pro jahr und Monat die Mietzinsbeitrag definiert
  * 
@@ -21,12 +21,12 @@ import ch.kausoft.basic.JahrMonat;
 public final class Mietzinsbeitrag extends DatenRecord {
 
 	/**
-	 * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
+	 * Dieser Zins und Amortisationssatz ist gÃ¼ltig ab diesem Jahr
 	 */
 	public JahrMonat gueltigAb;
 
 	/**
-	 * Ab dem definierten Jahr wird jährlich dieser Betrag verwendet um die
+	 * Ab dem definierten Jahr wird jÃ¼hrlich dieser Betrag verwendet um die
 	 * auflauffenden Zinsen und die Amortisation zu finanzieren.
 	 */
 	public double jaehrlicherMietzinsbeitrag;

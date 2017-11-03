@@ -14,7 +14,7 @@ public abstract class BezeichnungA extends AttributA {
 
 	/**
 	 * @since created at 04.01.2014.23:29:37
-	 * @see ch.kausoft.attribut.AttributA#getBundleName()
+	 * @see AttributA#getBundleName()
 	 */
 	public String getBundleName() {
 		return AttributCommon.bundleName;
@@ -22,7 +22,7 @@ public abstract class BezeichnungA extends AttributA {
 
 	/**
 	 * @since created at 04.01.2014.23:32:16
-	 * @see ch.kausoft.attribut.AttributA#getAttributID()
+	 * @see AttributA#getAttributID()
 	 */
 	public String getAttributID() {
 		return "Bezeichnung";

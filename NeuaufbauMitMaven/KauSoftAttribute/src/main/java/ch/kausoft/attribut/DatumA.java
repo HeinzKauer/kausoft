@@ -14,15 +14,15 @@ public abstract class DatumA extends AttributA {
   
   /**
    * 
-   * @see ch.kausoft.attribut.AttributA#getBundleName()
+   * @see AttributA#getBundleName()
    */
   public String getBundleName() {
     return AttributCommon.bundleName;
   }
-  
+
   /**
    * @created 27.07.2008.01:06:22
-   * @see ch.kausoft.attribut.AttributA#getAttributID()
+   * @see AttributA#getAttributID()
    */
   public String getAttributID() {
     return "Datum";

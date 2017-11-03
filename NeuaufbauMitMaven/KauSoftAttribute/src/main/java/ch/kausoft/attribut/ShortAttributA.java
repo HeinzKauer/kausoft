@@ -5,7 +5,7 @@
 package ch.kausoft.attribut;
 
 /**
- * Ein ShortAttribut kann eine Ausprägung von MIN_VALUE -32768 bis
+ * Ein ShortAttribut kann eine Ausprï¿½gung von MIN_VALUE -32768 bis
  * MAX_VALUE 32767 aufweisen.
  * 
  * @since created at 30.07.2008.00:44:48
@@ -15,17 +15,17 @@ package ch.kausoft.attribut;
 public abstract class ShortAttributA extends AttributA {
   
   /**
-   * @see ch.kausoft.attribut.AttributA#getString()
+   * @see AttributA#getString()
    */
   public final String getString() {
     short s = getShort();
     return Long.toString(s);
   }
-  
+
   /**
    * (non-Javadoc)
-   * 
-   * @see ch.kausoft.attribut.AttributA#setString(java.lang.String)
+   *
+   * @see AttributA#setString(String)
    */
   public final void setString(String value) {
     try {

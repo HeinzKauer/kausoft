@@ -1,11 +1,11 @@
 package ch.kausoft.basic;
 
+import lombok.Data;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
-import lombok.Data;
 
 @Data
 public class RecordID {
@@ -17,7 +17,7 @@ public class RecordID {
 
 	/**
 	 * Die zuletzt vergebene ID-Nummer wird festgehalten. Dies ist notwendig weil innerhalb sehr kurzer Zeit mehrere ID's
-	 * angefordert werden können. In der Methode
+	 * angefordert werden kÃ¶nnen. In der Methode
 	 * 
 	 * @see #getNextNewID()
 	 */

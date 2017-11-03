@@ -1,14 +1,14 @@
 package ch.kausoft.kostenmiete;
 
-import java.util.HashMap;
-import java.util.List;
-
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 import ch.kausoft.basic.DatenBB;
 import ch.kausoft.basic.DatenSpeicher;
 import ch.kausoft.basic.JahrMonat;
 import ch.kausoft.kostenmiete.Tilgung.TilgungStrategie;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import java.util.HashMap;
+import java.util.List;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -25,7 +25,7 @@ public final class Investition extends DatenBB {
 
 
 	/**
-	 * Ein investierter Betrag der w‰hrend einer bestimmten Dauer amortisiert und getilgt werden soll
+	 * Ein investierter Betrag der w√§hrend einer bestimmten Dauer amortisiert und getilgt werden soll
 	 */
 	private int investitionsBetrag;
 

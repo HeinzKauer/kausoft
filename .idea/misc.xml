@@ -4,7 +4,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/NeuaufbauMitMaven/KauSoftAttribute/pom.xml" />
-        <option value="$PROJECT_DIR$/Attribute/pom.xml" />
         <option value="$PROJECT_DIR$/SimpleConsolUserInterface/pom.xml" />
       </list>
     </option>

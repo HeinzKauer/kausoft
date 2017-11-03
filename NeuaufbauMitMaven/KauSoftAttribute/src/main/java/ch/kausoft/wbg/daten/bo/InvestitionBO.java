@@ -1,30 +1,26 @@
 package ch.kausoft.wbg.daten.bo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
+import ch.kausoft.kostenmiete.Investition;
+import ch.kausoft.kostenmiete.KapitalZinssatz;
+import ch.kausoft.kostenmiete.Mietzinsbeitrag;
+import ch.kausoft.kostenmiete.Tilgung;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 
-import ch.kausoft.basic.DatenSpeicher;
-import ch.kausoft.kostenmiete.Investition;
-import ch.kausoft.kostenmiete.Mietzinsbeitrag;
-import ch.kausoft.kostenmiete.KapitalZinssatz;
-import ch.kausoft.kostenmiete.Tilgung;
-import ch.kausoft.kostenmiete.Wohnung;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
- * <h1>Investitionen</h1> Eine Investition wird getätigt und dann zu einem bestimmten Zeitpunkt Aktiviert. Danach muss
+ * <h1>Investitionen</h1> Eine Investition wird getÃ¶tigt und dann zu einem bestimmten Zeitpunkt Aktiviert. Danach muss
  * diese Investition Amortisiert oder abgetragen werden. Eine werterhaltende Investition sollte durch angespartes
- * Kapital aus einem Erneuerungsfond getilt werden können. Der Wertvermehrende Anteil muss innerhalb einer Lebensdauer
+ * Kapital aus einem Erneuerungsfond getilt werden kÃ¶nnen. Der Wertvermehrende Anteil muss innerhalb einer Lebensdauer
  * Amortisiert werden.
  * 
  * <h2>Tilgung aus dem Erneuerungs Fond</h2> Werterhaltende Massnahmen sollten zum Teil aus dem Erneuerungfond und zum
- * Teil aus Eigenkapital Finanziert werden können.
+ * Teil aus Eigenkapital Finanziert werden kÃ¶nnen.
  * 
- * <h2>Tilgung durch Amortiasation währen einer Lebensdauer</h2> Die Investition Wert vermehrender Massnahmen sollten
+ * <h2>Tilgung durch Amortiasation wÃ¶hren einer Lebensdauer</h2> Die Investition Wert vermehrender Massnahmen sollten
  * innerhalb der Lebensdauer Amortisiert und getilgt werden.
  * 
  * 

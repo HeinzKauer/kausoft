@@ -9,14 +9,14 @@ package ch.kausoft.kostenmiete;
 public final class KapitalZinssatz {
 
 	/**
-	 * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
+	 * Dieser Zins und Amortisationssatz ist gÃ¤ltig ab diesem Jahr
 	 */
 	public int abJahr;
 
 	public int abMonat;
 
 	/**
-	 * Wir haben vier verschiedene Zinssätze
+	 * Wir haben vier verschiedene ZinssÃ¤tze
 	 */
 	public double zins[] = new double[4];
 
