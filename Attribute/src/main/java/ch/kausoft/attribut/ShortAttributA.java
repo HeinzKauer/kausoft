@@ -5,7 +5,7 @@
 package ch.kausoft.attribut;
 
 /**
- * Ein ShortAttribut kann eine Ausprägung von MIN_VALUE -32768 bis
+ * Ein ShortAttribut kann eine Ausprï¿½gung von MIN_VALUE -32768 bis
  * MAX_VALUE 32767 aufweisen.
  * 
  * @since created at 30.07.2008.00:44:48

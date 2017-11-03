@@ -64,7 +64,7 @@ public class DataImporter {
 	private void parsData(String zeile) {
 		String[] d = zeile.split(",");
 		if (d != null && d.length <= 3)
-			return; // Zeile überlesen
+			return; // Zeile ï¿½berlesen
 		if (d[0].equalsIgnoreCase("InvestieresKapital")) {
 			DataParser.parsInvestiertesKapital(d);
 		} else if (d[0].equalsIgnoreCase("KapitalZinssatz")) {
@@ -98,11 +98,11 @@ public class DataImporter {
 	// - iv.invetition.getTilgungAusErneuerungsFond());
 	// } catch (Exception e) {
 	// System.out
-	// .println("130802-0040 Daten für Investition fehlerhaft");
+	// .println("130802-0040 Daten fï¿½r Investition fehlerhaft");
 	// }
 	// } else {
 	// System.out
-	// .println("130802-0033 Daten für Investition fehlerhaft");
+	// .println("130802-0033 Daten fï¿½r Investition fehlerhaft");
 	// }
 	// } else if (d[2].equalsIgnoreCase("Mietzinsbeitrag")) {
 	// if (d.length >= 5) {
@@ -112,11 +112,11 @@ public class DataImporter {
 	// Double.parseDouble(d[4])));
 	// } catch (Exception e) {
 	// System.out
-	// .println("130802-0044 Daten für Mietzinsbeitrag fehlerhaft");
+	// .println("130802-0044 Daten fï¿½r Mietzinsbeitrag fehlerhaft");
 	// }
 	// } else {
 	// System.out
-	// .println("130802-0042 Daten für Mietzinsbeitrag fehlerhaft");
+	// .println("130802-0042 Daten fï¿½r Mietzinsbeitrag fehlerhaft");
 	// }
 	// } else if (d[2].equalsIgnore Case("Tilgung")) {
 	// if (d[3].equalsIgnoreCase("Wohnung")) {
